@@ -1,0 +1,373 @@
+<div class="pdp-section">
+  <div class="page-container">
+    <div class="pdp-grid">
+      <!-- Left: Product Image Gallery -->
+      <div class="pdp-gallery">
+        <div class="pdp-main-image-wrap">
+          {% if product.featured_image %}
+            <img
+              id="pdp-main-img"
+              src="{{ product.featured_image | image_url: width: 1000 }}"
+              alt="{{ product.title | escape }}"
+              class="pdp-main-image"
+              width="600"
+              height="750"
+              loading="eager"
+            >
+          {% else %}
+            <img
+              id="pdp-main-img"
+              src="{{ 'prod-corealign-vest.jpg' | asset_url }}"
+              alt="CoreAlign Compression Vest"
+              class="pdp-main-image"
+              width="600"
+              height="750"
+              loading="eager"
+            >
+          {% endif %}
+        </div>
+
+        <div class="pdp-thumbnails-grid">
+          {% if product.images.size > 1 %}
+            {% for image in product.images limit: 4 %}
+              <button
+                type="button"
+                class="pdp-thumbnail-item {% if forloop.first %}is-active{% endif %}"
+                data-target-src="{{ image | image_url: width: 1000 }}"
+                data-action="switch-pdp-image"
+                aria-label="View photo {{ forloop.index }}"
+              >
+                <img
+                  src="{{ image | image_url: width: 240 }}"
+                  alt="{{ product.title | escape }} angle {{ forloop.index }}"
+                  class="pdp-thumbnail-img"
+                  width="120"
+                  height="120"
+                  loading="lazy"
+                >
+              </button>
+            {% endfor %}
+          {% else %}
+            <button type="button" class="pdp-thumbnail-item is-active" data-target-src="{{ 'prod-corealign-vest.jpg' | asset_url }}" data-action="switch-pdp-image" aria-label="View photo 1">
+              <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="{{ product.title | default: 'Product' }} angle 1" class="pdp-thumbnail-img" width="120" height="120" loading="lazy">
+            </button>
+            <button type="button" class="pdp-thumbnail-item" data-target-src="{{ 'hero-activewear.jpg' | asset_url }}" data-action="switch-pdp-image" aria-label="View photo 2">
+              <img src="{{ 'hero-activewear.jpg' | asset_url }}" alt="{{ product.title | default: 'Product' }} angle 2" class="pdp-thumbnail-img" width="120" height="120" loading="lazy">
+            </button>
+            <button type="button" class="pdp-thumbnail-item" data-target-src="{{ 'cat-men.jpg' | asset_url }}" data-action="switch-pdp-image" aria-label="View photo 3">
+              <img src="{{ 'cat-men.jpg' | asset_url }}" alt="{{ product.title | default: 'Product' }} angle 3" class="pdp-thumbnail-img" width="120" height="120" loading="lazy">
+            </button>
+            <button type="button" class="pdp-thumbnail-item" data-target-src="{{ 'prod-vector-compression.jpg' | asset_url }}" data-action="switch-pdp-image" aria-label="View photo 4">
+              <img src="{{ 'prod-vector-compression.jpg' | asset_url }}" alt="{{ product.title | default: 'Product' }} angle 4" class="pdp-thumbnail-img" width="120" height="120" loading="lazy">
+            </button>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Right: Product Purchase Details & Trust Info -->
+      <div class="pdp-info-col">
+        <div>
+          <span class="eyebrow">{{ product.type | default: "Men's Activewear" }}</span>
+          <h1 class="pdp-title">{{ product.title | default: "CoreAlign Compression Vest" }}</h1>
+          
+          <div class="pdp-price-wrap">
+            <span class="pdp-price">${{ product.price | money_without_trailing_zeros | default: "34.99" }}</span>
+            <span class="pdp-compare-price">${{ product.compare_at_price | money_without_trailing_zeros | default: "44.99" }}</span>
+            <span class="pdp-save-badge">Save $10</span>
+          </div>
+        </div>
+
+        <p class="pdp-description">
+          {{ product.description | default: "The CoreAlign Compression Vest provides targeted midsection and chest support during heavy lifting, conditioning, or daily wear. Constructed from a high-recovery nylon-spandex weave that wicks sweat quickly and prevents chafing under gym tees or worn solo." }}
+        </p>
+
+        <!-- Variant Size Selector -->
+        <div class="pdp-option-group">
+          <div class="pdp-option-header">
+            <span>Select Size: <strong id="selected-size-label">L</strong></span>
+            <button type="button" class="size-guide-btn" data-action="open-size-guide">
+              Size Guide
+            </button>
+          </div>
+          <div class="size-chips">
+            <button type="button" class="size-chip" data-size="S">S</button>
+            <button type="button" class="size-chip" data-size="M">M</button>
+            <button type="button" class="size-chip is-selected" data-size="L">L</button>
+            <button type="button" class="size-chip" data-size="XL">XL</button>
+            <button type="button" class="size-chip" data-size="2XL">2XL</button>
+          </div>
+        </div>
+
+        <!-- Call to Actions -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-xs); margin-top: var(--space-xs);">
+          <button
+            type="button"
+            class="btn btn-primary btn-block"
+            data-action="quick-add"
+            data-product-title="{{ product.title | default: 'CoreAlign Compression Vest' }}"
+          >
+            Add to Bag &bull; $34.99
+          </button>
+        </div>
+
+        <!-- Transparent US Shipping & Defect Policy Box -->
+        <div class="pdp-trust-box">
+          <div class="trust-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <div>
+              <strong>US Shipping Timeline:</strong>
+              <div>Processing: 2&ndash;4 business days &bull; Estimated Delivery: 8&ndash;12 business days total. Tracked via USPS.</div>
+            </div>
+          </div>
+          <div class="trust-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div>
+              <strong>Return & Defect Policy:</strong>
+              <div>Returns and full replacements accepted for seller-side mistakes or damaged/defective items. Normal change-of-mind returns are not accepted to maintain hygiene standards and accessible direct pricing.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Accordions -->
+        <div style="margin-top: var(--space-md);">
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>Fit & Model Specs</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p>Snug athletic compression fit designed to stabilize core muscles. If between sizes or seeking lighter compression, order one size up.</p>
+              <p style="margin-top: 6px;"><strong>Model Profile:</strong> Model is 6'1" (185 cm), 195 lbs with a 42" chest, wearing size Large.</p>
+            </div>
+          </div>
+
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>Fabric & Care</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p><strong>Composition:</strong> 85% Technical Performance Nylon, 15% High-Recovery Spandex.</p>
+              <p style="margin-top: 6px;"><strong>Care:</strong> Machine wash cold with similar colors. Line dry or tumble dry low. Do not bleach. Do not iron.</p>
+            </div>
+          </div>
+        </div>
+
+    <!-- Image with Text Section -->
+    <section class="image-with-text-section" aria-label="Brand Story">
+      <div class="image-with-text-grid">
+        <div class="image-with-text-media">
+          <img
+            src="{{ 'image-with-text.jpg' | asset_url }}"
+            alt="Designed to Move. Made to Inspire - ALTRIXWEAR"
+            class="image-with-text-img"
+            loading="lazy"
+            width="549"
+            height="495"
+          >
+        </div>
+        <div class="image-with-text-content">
+          <h2 class="image-with-text-heading">Designed to Move. Made to Inspire.</h2>
+          <p class="image-with-text-desc">
+            Created for every stretch, every step, and every moment in between. This lightweight essential combines effortless comfort with a flattering fit, allowing you to move freely while feeling confident and stylish wherever your day takes you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions Section -->
+    <section class="pdp-faq-section" aria-label="Frequently Asked Questions">
+      <div class="page-container-narrow" style="max-width: 800px; margin: 0 auto;">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl); text-align: center;">
+          <span class="eyebrow">Got Questions?</span>
+          <h2 style="font-size: clamp(24px, 3.2vw, 32px); font-weight: 800; letter-spacing: 0.04em;">FREQUENTLY ASKED QUESTIONS</h2>
+          <p style="color: var(--color-gray-dark); margin-top: 8px; font-size: 15px;">
+            Everything you need to know about sizing, performance, materials, and shipping.
+          </p>
+        </div>
+
+        <div class="faq-accordion-group">
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>Will this garment roll up or shift during training?</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p>No. Engineered with an extended anatomical cut and internal anti-slip silicone lining to ensure garments stay locked in place through deep compound lifts and dynamic movement.</p>
+            </div>
+          </div>
+
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>How long does delivery take within the United States?</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p>All orders are processed within 2–4 business days. Standard USPS tracked shipping delivers within 8–12 business days across all 50 US states. Tracking details are emailed automatically once shipped.</p>
+            </div>
+          </div>
+
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>How do I know which size to order?</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p>We recommend taking your body measurements (chest/bust and waist) and comparing them to our Size Guide. If you are between sizes or prefer a less compressive fit, choose one size up.</p>
+            </div>
+          </div>
+
+          <div class="pdp-accordion-item">
+            <button type="button" class="pdp-accordion-trigger">
+              <span class="pdp-accordion-title">
+                <span>Are ALTRIXWEAR fabrics squat-proof and sweat-resistant?</span>
+              </span>
+              <span class="pdp-accordion-indicator">&plus;</span>
+            </button>
+            <div class="pdp-accordion-body">
+              <p>Yes, 100%. Our technical high-gauge nylon and spandex blends are tested across intense training angles and bright lighting to provide complete opacity, zero sheer, and rapid moisture-wicking evaporation.</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="pdp-related-section" style="margin-top: var(--space-4xl); padding-top: var(--space-3xl); border-top: 1px solid var(--color-border);">
+      <div class="section-header text-left" style="margin-bottom: var(--space-xl);">
+        <span class="eyebrow">Pair It With</span>
+        <h2>RELATED PRODUCTS</h2>
+        <p>Pieces engineered to pair seamlessly for training, recovery, and everyday support.</p>
+      </div>
+      <div id="pdp-related-grid" class="product-grid">
+        {% if recommendations.performed and recommendations.products_count > 0 %}
+          {% for rel_product in recommendations.products limit: 4 %}
+            <div class="product-card">
+              <div class="product-card-media">
+                <a href="{{ rel_product.url }}">
+                  <img src="{{ rel_product.featured_image | image_url: width: 600 }}" alt="{{ rel_product.title | escape }}" class="product-card-img" loading="lazy" width="400" height="500">
+                </a>
+                {% if rel_product.compare_at_price > rel_product.price %}
+                  <span class="product-card-badge">Sale</span>
+                {% endif %}
+                <div class="product-card-quickadd">
+                  <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="{{ rel_product.title | escape }}">Quick Add</button>
+                </div>
+              </div>
+              <div class="product-card-content">
+                <span class="product-card-type">{{ rel_product.type | default: 'Activewear' }}</span>
+                <h3 class="product-card-title"><a href="{{ rel_product.url }}">{{ rel_product.title }}</a></h3>
+                <div class="product-card-price">
+                  <span class="product-price-current">${{ rel_product.price | money_without_trailing_zeros }}</span>
+                  {% if rel_product.compare_at_price > rel_product.price %}
+                    <span class="product-price-compare">${{ rel_product.compare_at_price | money_without_trailing_zeros }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <!-- Fallback Cards for Initial Theme State -->
+          <div class="product-card">
+            <div class="product-card-media">
+              <a href="#">
+                <img src="{{ 'prod-vector-compression.jpg' | asset_url }}" alt="Vector Compression T-Shirt" class="product-card-img" loading="lazy" width="400" height="500">
+              </a>
+              <span class="product-card-badge">Sale</span>
+              <div class="product-card-quickadd">
+                <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Vector Compression T-Shirt">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-card-type">Men's Activewear</span>
+              <h3 class="product-card-title"><a href="#">Vector Compression T-Shirt</a></h3>
+              <div class="product-card-price">
+                <span class="product-price-current">$33.99</span>
+                <span class="product-price-compare">$42.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-media">
+              <a href="#">
+                <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="ApexFit Gym Vest" class="product-card-img" loading="lazy" width="400" height="500">
+              </a>
+              <span class="product-card-badge">Sale</span>
+              <div class="product-card-quickadd">
+                <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="ApexFit Gym Vest">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-card-type">Men's Activewear</span>
+              <h3 class="product-card-title"><a href="#">ApexFit Gym Vest</a></h3>
+              <div class="product-card-price">
+                <span class="product-price-current">$28.99</span>
+                <span class="product-price-compare">$36.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-media">
+              <a href="#">
+                <img src="{{ 'cat-men.jpg' | asset_url }}" alt="Ascend Compression Suit" class="product-card-img" loading="lazy" width="400" height="500">
+              </a>
+              <span class="product-card-badge">Sale</span>
+              <div class="product-card-quickadd">
+                <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Ascend Compression Suit">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-card-type">Men's Shapewear</span>
+              <h3 class="product-card-title"><a href="#">Ascend Compression Suit</a></h3>
+              <div class="product-card-price">
+                <span class="product-price-current">$36.99</span>
+                <span class="product-price-compare">$48.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card-media">
+              <a href="#">
+                <img src="{{ 'hero-activewear.jpg' | asset_url }}" alt="Structure Shaping Vest" class="product-card-img" loading="lazy" width="400" height="500">
+              </a>
+              <span class="product-card-badge">Sale</span>
+              <div class="product-card-quickadd">
+                <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Structure Shaping Vest">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-card-type">Men's Shapewear</span>
+              <h3 class="product-card-title"><a href="#">Structure Shaping Vest</a></h3>
+              <div class="product-card-price">
+                <span class="product-price-current">$31.99</span>
+                <span class="product-price-compare">$39.99</span>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": []
+}
+{% endschema %}

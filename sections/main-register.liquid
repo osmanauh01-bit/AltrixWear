@@ -1,0 +1,89 @@
+<div class="account-section">
+  <div class="page-container">
+    <div class="account-wrapper">
+      <div class="account-header">
+        <span class="eyebrow">{{ 'customer.register.title' | default: 'Customer Portal' }}</span>
+        <h1>CREATE ACCOUNT</h1>
+        <p>{{ 'customer.register.subtext' | default: 'Join AltrixWear for faster checkout, order tracking, and private activewear drops.' }}</p>
+      </div>
+
+      <div class="account-card">
+        {% form 'create_customer' %}
+          {{ form.errors | default_errors }}
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="account-field-group">
+              <label for="FirstName" class="account-label">{{ 'customer.register.first_name' | default: 'First Name' }}</label>
+              <input
+                type="text"
+                name="customer[first_name]"
+                id="FirstName"
+                class="account-input"
+                autocomplete="given-name"
+                placeholder="First"
+                required
+              >
+            </div>
+            <div class="account-field-group">
+              <label for="LastName" class="account-label">{{ 'customer.register.last_name' | default: 'Last Name' }}</label>
+              <input
+                type="text"
+                name="customer[last_name]"
+                id="LastName"
+                class="account-input"
+                autocomplete="family-name"
+                placeholder="Last"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="account-field-group">
+            <label for="CustomerEmail" class="account-label">{{ 'customer.register.email' | default: 'Email Address' }}</label>
+            <input
+              type="email"
+              name="customer[email]"
+              id="CustomerEmail"
+              class="account-input"
+              autocomplete="email"
+              placeholder="name@example.com"
+              required
+            >
+          </div>
+
+          <div class="account-field-group">
+            <label for="CustomerPassword" class="account-label">{{ 'customer.register.password' | default: 'Password' }}</label>
+            <input
+              type="password"
+              name="customer[password]"
+              id="CustomerPassword"
+              class="account-input"
+              autocomplete="new-password"
+              placeholder="Minimum 6 characters"
+              minlength="6"
+              required
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: var(--space-md);">
+            {{ 'customer.register.submit' | default: 'Create Account' }}
+          </button>
+
+          <div style="text-align: center; margin-top: var(--space-lg); font-size: 13px; color: var(--color-gray-dark);">
+            <span>Already have an account?</span>
+            <a href="{{ routes.account_login_url }}" style="font-weight: 700; color: var(--color-near-black); margin-left: 4px; text-decoration: underline;">
+              Sign in
+            </a>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer Register",
+  "settings": []
+}
+{% endschema %}

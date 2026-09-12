@@ -1,0 +1,73 @@
+<div class="account-section">
+  <div class="page-container">
+    <div class="account-wrapper">
+      <div class="account-header">
+        <span class="eyebrow">{{ 'customer.account.title' | default: 'Customer Portal' }}</span>
+        <h1>{{ 'customer.login_page.title' | default: 'MY ACCOUNT' }}</h1>
+        <p>{{ 'customer.login_page.subtext' | default: 'Sign in to view your orders, saved addresses, and activewear preferences.' }}</p>
+      </div>
+
+      <div class="account-card">
+        {% form 'customer_login' %}
+          {{ form.errors | default_errors }}
+
+          <div class="account-field-group">
+            <label for="CustomerEmail" class="account-label">{{ 'customer.login_page.email' | default: 'Email Address' }}</label>
+            <input
+              type="email"
+              name="customer[email]"
+              id="CustomerEmail"
+              class="account-input"
+              autocomplete="email"
+              autocorrect="off"
+              autocapitalize="off"
+              required
+              placeholder="name@example.com"
+            >
+          </div>
+
+          {% if form.password_needed %}
+            <div class="account-field-group">
+              <label for="CustomerPassword" class="account-label">{{ 'customer.login_page.password' | default: 'Password' }}</label>
+              <div class="account-input-wrapper">
+                <input
+                  type="password"
+                  name="customer[password]"
+                  id="CustomerPassword"
+                  class="account-input"
+                  autocomplete="current-password"
+                  required
+                  placeholder="••••••••"
+                >
+              </div>
+            </div>
+
+            <div class="account-form-meta">
+              <a href="#recover" id="RecoverPassword" class="account-forgot-link">
+                {{ 'customer.login_page.forgot_password' | default: 'Forgot password?' }}
+              </a>
+            </div>
+          {% endif %}
+
+          <button type="submit" class="btn btn-primary btn-block">
+            {{ 'customer.login_page.sign_in' | default: 'Sign In' }}
+          </button>
+
+          <div style="text-align: center; margin-top: var(--space-lg); font-size: 13px; color: var(--color-gray-dark);">
+            <span>Don't have an account?</span>
+            <a href="{{ routes.account_register_url }}" style="font-weight: 700; color: var(--color-near-black); margin-left: 4px; text-decoration: underline;">
+              Create one
+            </a>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer Login",
+  "settings": []
+}
+{% endschema %}

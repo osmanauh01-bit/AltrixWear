@@ -1,0 +1,54 @@
+<div class="section-spacing" style="padding-top: 130px;">
+  <div class="page-container page-container-narrow">
+    <div class="section-header text-left" style="margin-bottom: var(--space-xl);">
+      <span class="eyebrow">Customer Support</span>
+      <h1>CONTACT ALTRIXWEAR</h1>
+      <p>Have a question regarding sizing, shipping, or an existing order? Our US-focused customer support team is here to assist you.</p>
+    </div>
+
+    <!-- Contact Details Box -->
+    <div style="background-color: var(--color-off-white); border: 1px solid var(--color-border); border-radius: var(--radius-xs); padding: var(--space-lg); margin-bottom: var(--space-2xl);">
+      <p style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;">Direct Email Support</p>
+      <p style="font-size: 15px; color: var(--color-near-black); margin-bottom: 8px;">
+        <a href="mailto:support@altrixwear.com" style="text-decoration: underline;">support@altrixwear.com</a>
+      </p>
+      <p style="font-size: 13px; color: var(--color-gray-medium);">
+        Typical response time: Within 24&ndash;48 business hours (Monday &ndash; Friday).
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" style="display: flex; flex-direction: column; gap: var(--space-md);">
+      <div>
+        <label for="ContactFormName" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Your Name</label>
+        <input type="text" id="ContactFormName" name="contact[name]" class="email-input" style="width: 100%;" required>
+      </div>
+
+      <div>
+        <label for="ContactFormEmail" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Email Address</label>
+        <input type="email" id="ContactFormEmail" name="contact[email]" class="email-input" style="width: 100%;" required>
+      </div>
+
+      <div>
+        <label for="ContactFormOrder" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Order Number (Optional)</label>
+        <input type="text" id="ContactFormOrder" name="contact[order_number]" class="email-input" style="width: 100%;" placeholder="#AW-">
+      </div>
+
+      <div>
+        <label for="ContactFormMessage" style="display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">How can we help?</label>
+        <textarea id="ContactFormMessage" name="contact[body]" rows="5" class="email-input" style="width: 100%; resize: vertical;" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: var(--space-xs);">
+        SEND INQUIRY
+      </button>
+    </form>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": []
+}
+{% endschema %}

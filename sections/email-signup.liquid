@@ -1,0 +1,36 @@
+<section class="email-signup-section section-spacing" aria-label="Email Newsletter">
+  <div class="page-container">
+    <div class="email-signup-wrap">
+      <span class="eyebrow">Exclusive Welcome Offer</span>
+      <h2>GET 10% OFF YOUR FIRST ORDER</h2>
+      <p style="color: var(--color-gray-dark); margin-top: 8px; font-size: 15px;">
+        Join the AltrixWear community for early access to new activewear drops, restocks, and training insights.
+      </p>
+
+      <form id="email-discount-form" class="email-form" action="/contact#contact_form" method="post">
+        <input
+          type="email"
+          name="contact[email]"
+          class="email-input"
+          placeholder="Enter your email address"
+          required
+          aria-label="Email Address"
+        >
+        <button type="submit" class="btn btn-primary">
+          GET MY 10% OFF
+        </button>
+      </form>
+
+      <p class="email-disclaimer">
+        Instant coupon reveal on submit. Valid on all activewear and shapewear collections. No spam, ever.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Email Signup",
+  "settings": []
+}
+{% endschema %}

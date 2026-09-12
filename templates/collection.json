@@ -1,0 +1,13 @@
+{
+  "name": "Collection",
+  "wrapper": "div.collection-wrapper",
+  "sections": {
+    "main_collection": {
+      "type": "main-collection",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main_collection"
+  ]
+}

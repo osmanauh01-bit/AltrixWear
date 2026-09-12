@@ -1,0 +1,57 @@
+<!-- Search Modal -->
+<div id="search-modal" class="modal-backdrop search-modal-backdrop" aria-hidden="true">
+  <div class="search-modal-container" role="dialog" aria-label="Search Activewear Catalog">
+    <div class="search-modal-header">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search-input-wrap">
+        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="text"
+          inputmode="search"
+          name="q"
+          id="search-input"
+          class="search-input"
+          placeholder="Search activewear, vests, sets, shapewear..."
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button type="button" id="search-clear-btn" class="search-clear-btn" data-action="clear-search" aria-label="Clear search" style="display: none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </form>
+      <button type="button" class="search-close-btn" data-action="close-search" aria-label="Close search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Quick Search Pill Suggestions -->
+    <div class="search-suggestions">
+      <span class="search-suggestions-label">Popular Searches:</span>
+      <div class="search-tags">
+        <button type="button" class="search-tag-pill" data-query="Compression Vest">Compression Vest</button>
+        <button type="button" class="search-tag-pill" data-query="Yoga Set">Yoga Set</button>
+        <button type="button" class="search-tag-pill" data-query="Men">Men's Activewear</button>
+        <button type="button" class="search-tag-pill" data-query="Women">Women's Activewear</button>
+        <button type="button" class="search-tag-pill" data-query="Shapewear">Shapewear</button>
+      </div>
+    </div>
+
+    <!-- Live Search Results / Trending -->
+    <div class="search-results-section">
+      <div class="search-results-header">
+        <span id="search-results-title" class="search-results-title">Trending Activewear</span>
+        <span id="search-results-count" class="search-results-count">4 items</span>
+      </div>
+      <div id="search-results-grid" class="search-results-grid">
+        <!-- Injected dynamically by theme.js -->
+      </div>
+    </div>
+
+    <div class="search-modal-footer">
+      <a href="/collections/all" class="search-view-all-link">
+        Explore All Activewear in Shop &rarr;
+      </a>
+    </div>
+  </div>
+</div>

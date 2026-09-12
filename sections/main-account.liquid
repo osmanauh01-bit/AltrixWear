@@ -1,0 +1,88 @@
+<div class="account-section">
+  <div class="page-container">
+    <div class="section-header text-left" style="margin-bottom: var(--space-xl); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <span class="eyebrow">Customer Account</span>
+        <h1>WELCOME, {{ customer.first_name | default: 'MEMBER' }}</h1>
+        <p>Manage your orders, saved addresses, and activewear preferences.</p>
+      </div>
+      <div>
+        <a href="{{ routes.account_logout_url }}" class="btn btn-secondary btn-sm">Sign Out</a>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-2xl);">
+      <!-- Order History -->
+      <div>
+        <h2 style="font-size: 20px; margin-bottom: var(--space-md);">Order History</h2>
+        {% paginate customer.orders by 10 %}
+          {% if customer.orders.size > 0 %}
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                <thead>
+                  <tr style="border-bottom: 2px solid var(--color-near-black); text-align: left;">
+                    <th style="padding: 10px 12px;">Order</th>
+                    <th style="padding: 10px 12px;">Date</th>
+                    <th style="padding: 10px 12px;">Payment</th>
+                    <th style="padding: 10px 12px;">Fulfillment</th>
+                    <th style="padding: 10px 12px;">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order in customer.orders %}
+                    <tr style="border-bottom: 1px solid var(--color-border);">
+                      <td style="padding: 12px;"><a href="{{ order.customer_url }}" style="font-weight: 700; text-decoration: underline;">{{ order.name }}</a></td>
+                      <td style="padding: 12px;">{{ order.created_at | time_tag: format: 'date' }}</td>
+                      <td style="padding: 12px;">{{ order.financial_status_label }}</td>
+                      <td style="padding: 12px;">{{ order.fulfillment_status_label }}</td>
+                      <td style="padding: 12px; font-weight: 700;">{{ order.total_net_amount | money_with_currency }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            {{ paginate | default_pagination }}
+          {% else %}
+            <div class="account-card" style="text-align: center; padding: var(--space-2xl);">
+              <p style="color: var(--color-gray-dark); margin-bottom: var(--space-md);">You haven't placed any orders yet.</p>
+              <a href="{{ routes.all_products_collection_url }}" class="btn btn-primary btn-sm">Shop Collection</a>
+            </div>
+          {% endif %}
+        {% endpaginate %}
+      </div>
+
+      <!-- Account Details -->
+      <div>
+        <h2 style="font-size: 20px; margin-bottom: var(--space-md);">Account Details</h2>
+        <div class="account-card">
+          <p style="font-weight: 700; margin-bottom: 4px;">{{ customer.name }}</p>
+          <p style="color: var(--color-gray-dark); margin-bottom: var(--space-md);">{{ customer.email }}</p>
+
+          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md); margin-top: var(--space-md);">
+            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">Default Address</h3>
+            {% if customer.default_address %}
+              <p style="font-size: 13px; line-height: 1.5; color: var(--color-gray-dark);">
+                {{ customer.default_address.address1 }}<br>
+                {% if customer.default_address.address2 %}{{ customer.default_address.address2 }}<br>{% endif %}
+                {{ customer.default_address.city }}, {{ customer.default_address.province_code }} {{ customer.default_address.zip }}<br>
+                {{ customer.default_address.country }}
+              </p>
+            {% else %}
+              <p style="font-size: 13px; color: var(--color-gray-dark);">No default address saved.</p>
+            {% endif %}
+            <a href="{{ routes.account_addresses_url }}" style="font-size: 13px; font-weight: 700; color: var(--color-near-black); text-decoration: underline; display: inline-block; margin-top: 8px;">
+              Manage Addresses ({{ customer.addresses_count }})
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customer Account",
+  "settings": []
+}
+{% endschema %}

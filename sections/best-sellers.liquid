@@ -1,0 +1,118 @@
+<section class="bestsellers-section section-spacing" aria-label="Best Sellers">
+  <div class="page-container">
+    <div class="section-header">
+      <span class="eyebrow">Proven Essentials</span>
+      <h2>BEST SELLERS</h2>
+      <p>Our most-reached-for gymwear and compression pieces, tested for durability and athletic performance.</p>
+    </div>
+
+    <div class="product-grid">
+      {% if section.settings.collection != blank and collections[section.settings.collection].products_count > 0 %}
+        {% for product in collections[section.settings.collection].products limit: 4 %}
+          {% render 'product-card', product: product %}
+        {% endfor %}
+      {% else %}
+        <!-- Product 1: CoreAlign Compression Vest -->
+        <div class="product-card">
+          <div class="product-card-media">
+            <a href="/products/corealign-compression-vest">
+              <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="CoreAlign Compression Vest" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="CoreAlign Compression Vest">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/corealign-compression-vest">CoreAlign Compression Vest</a></h3>
+            <div class="product-card-price">
+              <span class="product-price-current">$34.99</span>
+              <span class="product-price-compare">$44.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: FlowState Yoga Set -->
+        <div class="product-card">
+          <div class="product-card-media">
+            <a href="/products/flowstate-yoga-set">
+              <img src="{{ 'prod-flowstate-set.jpg' | asset_url }}" alt="FlowState Yoga Set" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="FlowState Yoga Set">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/flowstate-yoga-set">FlowState Yoga Set</a></h3>
+            <div class="product-card-price">
+              <span class="product-price-current">$40.99</span>
+              <span class="product-price-compare">$52.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Vector Compression T-Shirt -->
+        <div class="product-card">
+          <div class="product-card-media">
+            <a href="/products/vector-compression-t-shirt">
+              <img src="{{ 'prod-vector-compression.jpg' | asset_url }}" alt="Vector Compression T-Shirt" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Vector Compression T-Shirt">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/vector-compression-t-shirt">Vector Compression T-Shirt</a></h3>
+            <div class="product-card-price">
+              <span class="product-price-current">$33.99</span>
+              <span class="product-price-compare">$42.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Second Skin High-Waist Shaper -->
+        <div class="product-card">
+          <div class="product-card-media">
+            <a href="/products/second-skin-high-waist-shaper">
+              <img src="{{ 'prod-secondskin-shaper.jpg' | asset_url }}" alt="Second Skin High-Waist Shaper" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Second Skin High-Waist Shaper">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Shapewear</span>
+            <h3 class="product-card-title"><a href="/products/second-skin-high-waist-shaper">Second Skin High-Waist Shaper</a></h3>
+            <div class="product-card-price">
+              <span class="product-price-current">$45.99</span>
+              <span class="product-price-compare">$58.99</span>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <div style="text-align: center; margin-top: var(--space-2xl);">
+      <a href="/collections/all" class="btn btn-secondary">VIEW ALL PRODUCTS</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Best Sellers",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    }
+  ]
+}
+{% endschema %}

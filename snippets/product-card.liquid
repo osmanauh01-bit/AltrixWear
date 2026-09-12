@@ -1,0 +1,65 @@
+{% liquid
+  assign prod_category = 'men'
+  assign type_down = product.type | downcase
+  assign title_down = product.title | downcase
+  assign tags_down = product.tags | join: ' ' | downcase
+
+  if tags_down contains 'women' or type_down contains 'women' or title_down contains 'women' or title_down contains 'yoga' or title_down contains 'bodysuit' or title_down contains 'second skin'
+    assign prod_category = 'women'
+  elsif tags_down contains 'men' or type_down contains 'men' or title_down contains 'men' or title_down contains 'structure' or title_down contains 'vest' or title_down contains 'compression'
+    assign prod_category = 'men'
+  endif
+
+  if tags_down contains 'shapewear' or type_down contains 'shapewear' or title_down contains 'shapewear' or title_down contains 'shaper' or title_down contains 'bodysuit' or title_down contains 'structure' or title_down contains 'corealign'
+    assign prod_category = prod_category | append: ' shapewear'
+  endif
+%}
+<div class="product-card" data-product-id="{{ product.id }}" data-category="{{ prod_category }}">
+  <div class="product-card-media">
+    <a href="{{ product.url }}" aria-label="{{ product.title }}">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | image_url: width: 600 }}"
+          alt="{{ product.featured_image.alt | default: product.title | escape }}"
+          class="product-card-img"
+          loading="lazy"
+          width="400"
+          height="500"
+        >
+      {% else %}
+        <img
+          src="{{ 'prod-corealign-vest.jpg' | asset_url }}"
+          alt="{{ product.title | escape }}"
+          class="product-card-img"
+          loading="lazy"
+          width="400"
+          height="500"
+        >
+      {% endif %}
+    </a>
+
+    {% if product.compare_at_price > product.price %}
+      <span class="product-card-badge">Sale</span>
+    {% endif %}
+
+    <div class="product-card-quickadd">
+      <button
+        type="button"
+        class="btn btn-primary btn-sm btn-block"
+        data-action="quick-add"
+        data-product-title="{{ product.title | escape }}"
+        data-product-price="{{ product.price | money }}"
+      >
+        Quick Add
+      </button>
+    </div>
+  </div>
+
+  <div class="product-card-content">
+    <span class="product-card-type">{{ product.type | default: 'Activewear' }}</span>
+    <h3 class="product-card-title">
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    </h3>
+    {% render 'price', product: product %}
+  </div>
+</div>

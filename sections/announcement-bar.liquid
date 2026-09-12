@@ -1,0 +1,27 @@
+{% if section.settings.show_announcement %}
+  <aside class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="page-container">
+      <span>{{ section.settings.text }}</span>
+    </div>
+  </aside>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "Free US Shipping On Orders Over $75 • Estimated Total Delivery: 8–12 Business Days"
+    }
+  ]
+}
+{% endschema %}

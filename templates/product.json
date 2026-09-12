@@ -1,0 +1,18 @@
+{
+  "name": "Product",
+  "wrapper": "div.product-wrapper",
+  "sections": {
+    "main_product": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "social_proof": {
+      "type": "social-proof",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main_product",
+    "social_proof"
+  ]
+}

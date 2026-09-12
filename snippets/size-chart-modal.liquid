@@ -1,0 +1,85 @@
+<!-- Size Guide Modal -->
+<div id="size-guide-modal" class="modal-backdrop" aria-hidden="true">
+  <div class="modal-container" role="dialog" aria-label="ALTRIXWEAR Sizing Chart">
+    <button type="button" class="modal-close-btn" data-action="close-size-guide" aria-label="Close size guide">
+      {% render 'icon', name: 'close' %}
+    </button>
+
+    <p class="eyebrow">Fit & Dimensions</p>
+    <h3 style="text-transform: uppercase; margin-bottom: 8px;">
+      {{ settings.size_guide_heading | default: 'ALTRIXWEAR Size Guide' }}
+    </h3>
+
+    {% if product.metafields.custom.size_guide != blank %}
+      <!-- Managed via Shopify Product Database Metafield (product.metafields.custom.size_guide) -->
+      <div class="custom-size-guide-content" style="margin-top: 16px;">
+        {{ product.metafields.custom.size_guide | metafield_tag }}
+      </div>
+    {% elsif settings.size_guide_page != blank and pages[settings.size_guide_page].content != blank %}
+      <!-- Managed via Shopify Backend Page (Online Store > Pages) -->
+      <div class="custom-size-guide-content" style="margin-top: 16px;">
+        {{ pages[settings.size_guide_page].content }}
+      </div>
+    {% else %}
+      <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: 16px;">
+        All measurements in inches. Designed for athletic compression and snug second-skin comfort.
+      </p>
+
+    <h4 style="font-size: 14px; text-transform: uppercase; margin-top: 16px;">Men's Compression & Gymwear</h4>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Chest</th>
+          <th>Waist</th>
+          <th>Length</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S</td><td>36" &ndash; 38"</td><td>29" &ndash; 31"</td><td>27"</td></tr>
+        <tr><td>M</td><td>38" &ndash; 40"</td><td>31" &ndash; 33"</td><td>28"</td></tr>
+        <tr><td>L</td><td>40" &ndash; 43"</td><td>33" &ndash; 36"</td><td>29"</td></tr>
+        <tr><td>XL</td><td>43" &ndash; 46"</td><td>36" &ndash; 39"</td><td>30"</td></tr>
+        <tr><td>2XL</td><td>46" &ndash; 49"</td><td>39" &ndash; 42"</td><td>31"</td></tr>
+        <tr><td>3XL</td><td>49" &ndash; 52"</td><td>42" &ndash; 45"</td><td>32"</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size: 14px; text-transform: uppercase; margin-top: 24px;">Women's Activewear Sets</h4>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Bust</th>
+          <th>Waist</th>
+          <th>Hips</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S</td><td>32" &ndash; 34"</td><td>25" &ndash; 27"</td><td>35" &ndash; 37"</td></tr>
+        <tr><td>M</td><td>34" &ndash; 36"</td><td>27" &ndash; 29"</td><td>37" &ndash; 39"</td></tr>
+        <tr><td>L</td><td>36" &ndash; 38"</td><td>29" &ndash; 32"</td><td>39" &ndash; 42"</td></tr>
+        <tr><td>XL</td><td>38" &ndash; 41"</td><td>32" &ndash; 35"</td><td>42" &ndash; 45"</td></tr>
+      </tbody>
+    </table>
+
+    <h4 style="font-size: 14px; text-transform: uppercase; margin-top: 24px;">Shapewear & Bodysuits</h4>
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Waist</th>
+          <th>Hips</th>
+          <th>Recommended Fit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S / M</td><td>25" &ndash; 29"</td><td>35" &ndash; 39"</td><td>Snug smoothing</td></tr>
+        <tr><td>L / XL</td><td>30" &ndash; 34"</td><td>40" &ndash; 44"</td><td>Targeted compression</td></tr>
+        <tr><td>2XL / 3XL</td><td>35" &ndash; 40"</td><td>45" &ndash; 50"</td><td>Maximum firm control</td></tr>
+        <tr><td>4XL / 6XL</td><td>41" &ndash; 48"</td><td>51" &ndash; 58"</td><td>Enhanced contour</td></tr>
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+</div>

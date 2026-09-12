@@ -1,0 +1,66 @@
+<section class="categories-section section-spacing" aria-label="Shop Categories">
+  <div class="page-container">
+    <div class="section-header">
+      <span class="eyebrow">Collections</span>
+      <h2>SHOP YOUR FIT</h2>
+      <p>Precision-engineered apparel designed for training intensity and everyday confidence.</p>
+    </div>
+
+    <div class="categories-grid">
+      <!-- Category 1: Men -->
+      <a href="/collections/men" class="category-tile" aria-label="Shop Men's Activewear">
+        <img
+          src="{{ 'cat-men.jpg' | asset_url }}"
+          alt="Men's Activewear & Compression"
+          class="category-tile-img"
+          loading="lazy"
+          width="600"
+          height="800"
+        >
+        <div class="category-tile-overlay">
+          <h3 class="category-tile-title">MEN'S ACTIVEWEAR</h3>
+          <span class="category-tile-link">Explore Collection {% render 'icon', name: 'arrow-right' %}</span>
+        </div>
+      </a>
+
+      <!-- Category 2: Women -->
+      <a href="/collections/women" class="category-tile" aria-label="Shop Women's Activewear">
+        <img
+          src="{{ 'cat-women.jpg' | asset_url }}"
+          alt="Women's Activewear & Yoga Sets"
+          class="category-tile-img"
+          loading="lazy"
+          width="600"
+          height="800"
+        >
+        <div class="category-tile-overlay">
+          <h3 class="category-tile-title">WOMEN'S ACTIVEWEAR</h3>
+          <span class="category-tile-link">Explore Collection {% render 'icon', name: 'arrow-right' %}</span>
+        </div>
+      </a>
+
+      <!-- Category 3: Shapewear -->
+      <a href="/collections/shapewear" class="category-tile" aria-label="Shop Shapewear">
+        <img
+          src="{{ 'cat-shapewear.jpg' | asset_url }}"
+          alt="Confidence Shapewear & Contour Bodysuits"
+          class="category-tile-img"
+          loading="lazy"
+          width="600"
+          height="800"
+        >
+        <div class="category-tile-overlay">
+          <h3 class="category-tile-title">SHAPEWEAR</h3>
+          <span class="category-tile-link">Explore Collection {% render 'icon', name: 'arrow-right' %}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop Categories",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopify Web Components Test</title>
+  <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link rel="manifest" href="../assets/site.webmanifest">
+</head>
+<body style="font-family: sans-serif; padding: 40px;">
+  <shopify-store
+    store-domain="https://66mb10-xu.myshopify.com"
+    public-access-token="2a11d99cc5b15ea622a9a6e6b25126a0"
+    country="US"
+    language="en"
+  >
+    <h1>Shopify Web Components Live Test</h1>
+
+    <shopify-cart id="main-cart"></shopify-cart>
+    <button onclick="document.getElementById('main-cart').showModal()">Open Cart</button>
+
+    <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+      <shopify-context type="product" handle="mens-compression-shaper-vest">
+        <template>
+          <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
+            <shopify-media width="250" height="300" query="product.selectedOrFirstAvailableVariant.image"></shopify-media>
+            <h3><shopify-data query="product.title"></shopify-data></h3>
+            <p><shopify-money query="product.selectedOrFirstAvailableVariant.price"></shopify-money></p>
+            <shopify-variant-selector></shopify-variant-selector>
+            <button onclick="document.getElementById('main-cart').addLine(event).showModal()" style="margin-top: 10px; padding: 10px; background: black; color: white; border: none; cursor: pointer;">
+              Add to Cart
+            </button>
+          </div>
+        </template>
+        <div shopify-loading-placeholder>Loading CoreAlign Vest from Shopify...</div>
+      </shopify-context>
+    </div>
+  </shopify-store>
+</body>
+</html>

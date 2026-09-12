@@ -1,0 +1,79 @@
+<section class="image-with-text-section section-spacing" aria-label="{{ section.settings.heading | escape }}">
+  <div class="page-container">
+    <div class="image-with-text-grid {% if section.settings.layout == 'text_first' %}image-with-text-reverse{% endif %}">
+      <div class="image-with-text-media">
+        {% if section.settings.image %}
+          <img
+            src="{{ section.settings.image | image_url: width: 900 }}"
+            alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
+            class="image-with-text-img"
+            loading="lazy"
+            width="549"
+            height="495"
+          >
+        {% else %}
+          <img
+            src="{{ 'image-with-text.jpg' | asset_url }}"
+            alt="Designed to Move. Made to Inspire - ALTRIXWEAR"
+            class="image-with-text-img"
+            loading="lazy"
+            width="549"
+            height="495"
+          >
+        {% endif %}
+      </div>
+      <div class="image-with-text-content">
+        <h2 class="image-with-text-heading">{{ section.settings.heading | default: "Designed to Move. Made to Inspire." }}</h2>
+        <div class="image-with-text-desc">
+          <p>{{ section.settings.text | default: "Created for every stretch, every step, and every moment in between. This lightweight essential combines effortless comfort with a flattering fit, allowing you to move freely while feeling confident and stylish wherever your day takes you." }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed to Move. Made to Inspire."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Created for every stretch, every step, and every moment in between. This lightweight essential combines effortless comfort with a flattering fit, allowing you to move freely while feeling confident and stylish wherever your day takes you."
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Desktop image placement",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ],
+      "default": "image_first"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text"
+    }
+  ]
+}
+{% endschema %}

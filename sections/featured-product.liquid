@@ -1,0 +1,52 @@
+<section class="featured-split-section section-spacing" aria-label="Featured Story">
+  <div class="page-container">
+    <div class="featured-split-grid">
+      <!-- Media Side -->
+      <div class="featured-split-media">
+        <img
+          src="{{ 'campaign-athletes.jpg' | asset_url }}"
+          alt="AltrixWear Athletes Training"
+          class="featured-split-img"
+          loading="lazy"
+          width="800"
+          height="600"
+        >
+      </div>
+
+      <!-- Copy Side -->
+      <div class="featured-split-copy">
+        <span class="eyebrow">Design & Function</span>
+        <h2>YOUR TRAINING. YOUR STYLE.</h2>
+        <p class="featured-split-desc">
+          Activewear made to move with you seamlessly from heavy gym sets to daily life. We balance moisture-wicking technical fabrics, reinforced flatlock seams, and ergonomic silhouettes.
+        </p>
+
+        <ul class="featured-split-list">
+          <li>
+            {% render 'icon', name: 'check' %}
+            <span><strong>Multi-directional stretch:</strong> Never restricts your range during squats, presses, or sprints.</span>
+          </li>
+          <li>
+            {% render 'icon', name: 'check' %}
+            <span><strong>High-recovery compression:</strong> Retains elasticity wash after wash without sagging.</span>
+          </li>
+          <li>
+            {% render 'icon', name: 'check' %}
+            <span><strong>Subtle, minimal branding:</strong> Clean lines that let your work take center stage.</span>
+          </li>
+        </ul>
+
+        <div style="margin-top: var(--space-md);">
+          <a href="/collections/all" class="btn btn-primary">SHOP PERFORMANCE WEAR</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Story",
+  "settings": []
+}
+{% endschema %}

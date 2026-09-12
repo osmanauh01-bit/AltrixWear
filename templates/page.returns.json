@@ -1,0 +1,12 @@
+{
+  "name": "Refund & Defect Policy",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

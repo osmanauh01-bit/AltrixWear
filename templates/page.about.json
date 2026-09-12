@@ -1,0 +1,22 @@
+{
+  "name": "About AltrixWear",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "brand_statement": {
+      "type": "brand-statement",
+      "settings": {}
+    },
+    "why_altrixwear": {
+      "type": "why-altrixwear",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "brand_statement",
+    "why_altrixwear"
+  ]
+}

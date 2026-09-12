@@ -1,0 +1,19 @@
+<div class="section-spacing" style="padding-top: 130px;">
+  <div class="page-container page-container-narrow">
+    <div class="section-header text-left" style="margin-bottom: var(--space-xl);">
+      <span class="eyebrow">Information</span>
+      <h1>{{ page.title | default: 'About AltrixWear' }}</h1>
+    </div>
+
+    <div style="line-height: var(--lh-loose); color: var(--color-gray-dark); font-size: 16px;">
+      {{ page.content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Page",
+  "settings": []
+}
+{% endschema %}

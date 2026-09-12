@@ -1,0 +1,63 @@
+<section class="reviews-section section-spacing" aria-label="Customer Reviews">
+  <div class="page-container">
+    <div class="section-header">
+      <span class="eyebrow">Community Feedback</span>
+      <h2>TESTED ON REAL BODIES</h2>
+      <p>Hear from lifters, runners, and everyday gym-goers who train in AltrixWear every week.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-stars">
+          {% for i in (1..5) %}{% render 'icon', name: 'star' %}{% endfor %}
+        </div>
+        <h3 class="review-title">"Incredible core support during squats"</h3>
+        <p class="review-quote">
+          "The CoreAlign Vest is legit. It keeps my midsection locked in and doesn't roll up when I'm doing compound lifts. For $35 this easily matches high-end gym brands I used to pay double for."
+        </p>
+        <div class="review-author">
+          <span class="review-author-name">Marcus T.</span>
+          <span class="review-verified">{% render 'icon', name: 'check' %} Verified Buyer</span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="review-stars">
+          {% for i in (1..5) %}{% render 'icon', name: 'star' %}{% endfor %}
+        </div>
+        <h3 class="review-title">"100% squat proof and so flattering"</h3>
+        <p class="review-quote">
+          "I bought the FlowState Yoga Set in Black. The fabric is buttery soft yet totally opaque. The high-waist band stays put without digging in at all. Ordering the Charcoal set next."
+        </p>
+        <div class="review-author">
+          <span class="review-author-name">Elena R.</span>
+          <span class="review-verified">{% render 'icon', name: 'check' %} Verified Buyer</span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-stars">
+          {% for i in (1..5) %}{% render 'icon', name: 'star' %}{% endfor %}
+        </div>
+        <h3 class="review-title">"Holds up after repeated wash cycles"</h3>
+        <p class="review-quote">
+          "The Vector Compression shirt has maintained its stretch and fit after dozens of hard conditioning sessions and washes. Breathable, comfortable, and no loose stitching."
+        </p>
+        <div class="review-author">
+          <span class="review-author-name">Devon K.</span>
+          <span class="review-verified">{% render 'icon', name: 'check' %} Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social Proof Reviews",
+  "settings": []
+}
+{% endschema %}

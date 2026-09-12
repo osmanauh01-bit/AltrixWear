@@ -1,0 +1,77 @@
+﻿<!-- Slide-Out Cart Drawer -->
+<div id="cart-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+
+<aside id="cart-drawer" class="cart-drawer" aria-label="Shopping Bag" aria-modal="true" role="dialog">
+  <div class="cart-drawer-header">
+    <h3 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;">
+      Your Bag (<span class="cart-count">{{ cart.item_count | default: 0 }}</span>)
+    </h3>
+    <button type="button" class="drawer-close-btn" data-action="close-cart" aria-label="Close bag">
+      {% render 'icon', name: 'close' %}
+    </button>
+  </div>
+
+  <div class="free-shipping-bar" style="background-color: var(--color-off-white); padding: 10px 20px; font-size: 12px; font-weight: 600; text-align: center; border-bottom: 1px solid var(--color-border);">
+    {% if cart.total_price >= 7500 %}
+      <span>🎉 Free US Shipping unlocked!</span>
+    {% elsif cart.total_price > 0 %}
+      {% assign remaining = 7500 | minus: cart.total_price %}
+      <span>Add <strong>${{ remaining | money_without_trailing_zeros }}</strong> more for Free US Shipping</span>
+    {% else %}
+      <span>Free US Shipping on orders over $75</span>
+    {% endif %}
+  </div>
+
+  <div class="cart-drawer-items">
+    {% if cart.item_count == 0 %}
+      <div class="cart-empty-state" style="padding: 48px 20px; text-align: center;">
+        <div style="margin-bottom: 16px; color: var(--color-gray-dark); display: flex; justify-content: center;">
+          {% render 'icon', name: 'cart' %}
+        </div>
+        <h4 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;">Your Bag Is Empty</h4>
+        <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: 22px; line-height: 1.5; max-width: 280px; margin-left: auto; margin-right: auto;">
+          Looks like you haven't added any activewear pieces to your bag yet.
+        </p>
+        <a href="{{ routes.all_products_collection_url }}" class="btn btn-primary btn-sm" style="display: inline-block;">Start Shopping</a>
+      </div>
+    {% else %}
+      {% for item in cart.items %}
+        <div class="cart-item" data-line-item-key="{{ item.key }}">
+          <img src="{{ item.image | image_url: width: 160 }}" alt="{{ item.title | escape }}" class="cart-item-img" width="70" height="90" loading="lazy">
+          <div class="cart-item-details">
+            <h4 class="cart-item-title">{{ item.product.title }}</h4>
+            <span class="cart-item-variant">{{ item.variant.title }}</span>
+            <span class="cart-item-price">${{ item.final_line_price | money_without_trailing_zeros }}</span>
+            <div class="cart-item-actions">
+              <div class="qty-control">
+                <button type="button" class="qty-btn" data-change="dec" aria-label="Decrease quantity">&minus;</button>
+                <input type="text" class="qty-input" value="{{ item.quantity }}" readonly>
+                <button type="button" class="qty-btn" data-change="inc" aria-label="Increase quantity">&plus;</button>
+              </div>
+              <button type="button" class="cart-remove-btn">Remove</button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="cart-drawer-footer">
+    <div class="cart-subtotal-row">
+      <span>Estimated Subtotal</span>
+      <span class="cart-subtotal-amount">${{ cart.total_price | money_without_trailing_zeros | default: "0.00" }}</span>
+    </div>
+    <p class="cart-shipping-notice">
+      US Delivery: 8–12 business days &bull; Taxes calculated at checkout
+    </p>
+    {% if cart.item_count == 0 %}
+      <a href="{{ routes.all_products_collection_url }}" class="btn btn-primary btn-block">
+        Explore Collection
+      </a>
+    {% else %}
+      <a href="/checkout" class="btn btn-primary btn-block">
+        Proceed to Checkout
+      </a>
+    {% endif %}
+  </div>
+</aside>

@@ -1,0 +1,37 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "menu": "Menu"
+    },
+    "search": {
+      "search": "Search",
+      "placeholder": "Search activewear, gym vests, shapewear..."
+    },
+    "cart": {
+      "title": "Your Bag",
+      "empty": "Your bag is currently empty.",
+      "continue_shopping": "Continue Shopping",
+      "checkout": "Proceed to Checkout",
+      "subtotal": "Subtotal",
+      "shipping_note": "Taxes & shipping calculated at checkout",
+      "free_shipping_threshold": "Add $75 or more for Free US Shipping!"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Bag",
+      "buy_now": "Buy with Shop Pay",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable",
+      "size": "Size",
+      "color": "Color",
+      "quantity": "Quantity",
+      "size_guide": "Size Guide",
+      "details": "Product Details",
+      "materials": "Fabric & Materials",
+      "shipping_returns": "Shipping & Defect Policy"
+    }
+  }
+}

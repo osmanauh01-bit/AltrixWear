@@ -1,0 +1,95 @@
+<section class="hero-section" aria-label="Hero Showcase">
+  <div class="hero-background-wrap">
+    {% if section.settings.image %}
+      <img
+        src="{{ section.settings.image | image_url: width: 2000 }}"
+        alt="{{ section.settings.headline | escape }}"
+        class="hero-background-img"
+        width="1920"
+        height="1080"
+        loading="eager"
+      >
+    {% else %}
+      <img
+        src="{{ 'hero-activewear.jpg' | asset_url }}"
+        alt="ALTRIXWEAR Activewear & Gymwear"
+        class="hero-background-img"
+        width="1920"
+        height="1080"
+        loading="eager"
+      >
+    {% endif %}
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="page-container">
+    <div class="hero-content-wrap">
+      <span class="eyebrow eyebrow-white">{{ section.settings.eyebrow | default: 'Activewear & Performance' }}</span>
+      <h1 class="hero-headline">{{ section.settings.headline | default: 'LOOK GOOD WHILE YOU WORK ON YOURSELF.' }}</h1>
+      <p class="hero-subheadline">
+        {{ section.settings.subheadline | default: 'Stylish, functional activewear made for training, movement and everyday confidence.' }}
+      </p>
+      <div class="hero-ctas">
+        <a href="{{ section.settings.cta_men_url | default: '/collections/men' }}" class="btn btn-white">
+          {{ section.settings.cta_men_text | default: 'SHOP MEN' }}
+        </a>
+        <a href="{{ section.settings.cta_women_url | default: '/collections/women' }}" class="btn btn-outline-white">
+          {{ section.settings.cta_women_text | default: 'SHOP WOMEN' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Background Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Activewear & Performance"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "LOOK GOOD WHILE YOU WORK ON YOURSELF."
+    },
+    {
+      "type": "textarea",
+      "id": "subheadline",
+      "label": "Subheadline",
+      "default": "Stylish, functional activewear made for training, movement and everyday confidence."
+    },
+    {
+      "type": "text",
+      "id": "cta_men_text",
+      "label": "Primary CTA Label",
+      "default": "SHOP MEN"
+    },
+    {
+      "type": "url",
+      "id": "cta_men_url",
+      "label": "Primary CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "cta_women_text",
+      "label": "Secondary CTA Label",
+      "default": "SHOP WOMEN"
+    },
+    {
+      "type": "url",
+      "id": "cta_women_url",
+      "label": "Secondary CTA URL"
+    }
+  ]
+}
+{% endschema %}

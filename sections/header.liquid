@@ -1,0 +1,82 @@
+<div class="floating-header-wrapper">
+  <header class="floating-header-pill" role="banner">
+    <!-- Left: Brand Logo -->
+    <div class="header-pill-left">
+      <button type="button" class="mobile-menu-trigger" data-action="open-mobile-menu" aria-label="Open Navigation Menu">
+        {% render 'icon', name: 'menu' %}
+      </button>
+
+      <a href="/" class="header-logo-link" aria-label="ALTRIXWEAR Homepage">
+        {% if section.settings.logo_white %}
+          <img src="{{ section.settings.logo_white | image_url: height: 88 }}" alt="ALTRIXWEAR" width="44" height="44" class="header-logo-round">
+        {% else %}
+          <img src="{{ 'logo-round.png' | asset_url }}" alt="ALTRIXWEAR" width="44" height="44" class="header-logo-round">
+        {% endif %}
+      </a>
+    </div>
+
+    <!-- Center: Main Navigation -->
+    <nav class="header-pill-nav" role="navigation" aria-label="Primary Navigation">
+      <a href="/" class="pill-nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+      <a href="/collections/all" class="pill-nav-link {% if request.path contains '/collections' %}active{% endif %}">Shop</a>
+      <a href="/pages/about" class="pill-nav-link {% if request.path contains '/pages/about' %}active{% endif %}">About</a>
+      <a href="/pages/contact" class="pill-nav-link {% if request.path contains '/pages/contact' %}active{% endif %}">Contact</a>
+    </nav>
+
+    <!-- Right: Minimal Actions -->
+    <div class="header-pill-actions">
+      <button type="button" class="pill-action-btn" data-action="open-search" aria-label="Search Catalog">
+        {% render 'icon', name: 'search' %}
+      </button>
+
+      <a href="{{ routes.account_url | default: '/account' }}" class="pill-action-btn" aria-label="{{ 'accessibility.account' | default: 'Account' }}">
+        {% render 'icon', name: 'user' %}
+      </a>
+
+      <button type="button" class="pill-action-btn" data-action="open-cart" aria-label="Open Shopping Bag">
+        {% render 'icon', name: 'cart' %}
+        <span class="pill-cart-count">{{ cart.item_count | default: 0 }}</span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-nav-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+
+<nav id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation" aria-modal="true" role="dialog">
+  <div class="mobile-nav-header">
+    <a href="/" class="header-logo-link">
+      <img src="{{ 'logo-white.png' | asset_url }}" alt="ALTRIXWEAR" width="120" height="28">
+    </a>
+    <button type="button" class="drawer-close-btn" data-action="close-mobile-menu" aria-label="Close menu">
+      {% render 'icon', name: 'close' %}
+    </button>
+  </div>
+
+  <div class="mobile-nav-links">
+    <a href="/" class="mobile-nav-item">Home</a>
+    <a href="/collections/all" class="mobile-nav-item">Shop</a>
+    <a href="/pages/about" class="mobile-nav-item">About</a>
+    <a href="/pages/contact" class="mobile-nav-item">Contact</a>
+    <a href="{{ routes.account_url | default: '/account' }}" class="mobile-nav-item">Account</a>
+  </div>
+
+  <div class="mobile-nav-footer">
+    <p><strong>Estimated US Delivery:</strong> 8&ndash;12 business days</p>
+    <p style="margin-top: 6px;">support@altrixwear.com</p>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Floating Pill Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo_white",
+      "label": "White/Light Logo Image"
+    }
+  ]
+}
+{% endschema %}

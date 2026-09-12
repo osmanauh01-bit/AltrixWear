@@ -1,0 +1,12 @@
+{
+  "name": "404 Not Found",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

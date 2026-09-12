@@ -1,0 +1,61 @@
+{
+  "name": "Homepage",
+  "wrapper": "div.homepage-wrapper",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "Activewear & Compression",
+        "headline": "LOOK GOOD WHILE YOU WORK ON YOURSELF.",
+        "subheadline": "Stylish, functional activewear made for training, movement and everyday confidence.",
+        "cta_men_text": "SHOP MEN",
+        "cta_men_url": "/collections/men",
+        "cta_women_text": "SHOP WOMEN",
+        "cta_women_url": "/collections/women"
+      }
+    },
+    "core_benefits": {
+      "type": "core-benefits",
+      "settings": {}
+    },
+    "shop_categories": {
+      "type": "shop-by-category",
+      "settings": {}
+    },
+    "best_sellers": {
+      "type": "best-sellers",
+      "settings": {}
+    },
+    "brand_statement": {
+      "type": "brand-statement",
+      "settings": {}
+    },
+    "featured_product": {
+      "type": "featured-product",
+      "settings": {}
+    },
+    "why_altrixwear": {
+      "type": "why-altrixwear",
+      "settings": {}
+    },
+    "social_proof": {
+      "type": "social-proof",
+      "settings": {}
+    },
+    "email_signup": {
+      "type": "email-signup",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "core_benefits",
+    "shop_categories",
+    "best_sellers",
+    "brand_statement",
+    "featured_product",
+    "why_altrixwear",
+    "social_proof",
+    "email_signup"
+  ]
+}

@@ -1,0 +1,1215 @@
+﻿{
+    "womens-body-shaping-pants-with-tight-waistband":  {
+                                                           "title":  "Second Skin High-Waist Shaper",
+                                                           "handle":  "womens-body-shaping-pants-with-tight-waistband",
+                                                           "variants":  [
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / S",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296417516",
+                                                                                "options":  {
+                                                                                                "size":  "S",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / M",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296876268",
+                                                                                "options":  {
+                                                                                                "size":  "M",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / L",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296679660",
+                                                                                "options":  {
+                                                                                                "size":  "L",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296810732",
+                                                                                "options":  {
+                                                                                                "size":  "XL",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / 2XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296581356",
+                                                                                "options":  {
+                                                                                                "size":  "2XL",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / 3XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296745196",
+                                                                                "options":  {
+                                                                                                "size":  "3XL",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Black / 4XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296646892",
+                                                                                "options":  {
+                                                                                                "size":  "4XL",
+                                                                                                "color":  "Black"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / S",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296384748",
+                                                                                "options":  {
+                                                                                                "size":  "S",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / M",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296351980",
+                                                                                "options":  {
+                                                                                                "size":  "M",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / L",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296614124",
+                                                                                "options":  {
+                                                                                                "size":  "L",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296515820",
+                                                                                "options":  {
+                                                                                                "size":  "XL",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / 2XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296548588",
+                                                                                "options":  {
+                                                                                                "size":  "2XL",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / 3XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296909036",
+                                                                                "options":  {
+                                                                                                "size":  "3XL",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Pink / 4XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296843500",
+                                                                                "options":  {
+                                                                                                "size":  "4XL",
+                                                                                                "color":  "Pink"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / S",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296974572",
+                                                                                "options":  {
+                                                                                                "size":  "S",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / M",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296712428",
+                                                                                "options":  {
+                                                                                                "size":  "M",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / L",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296450284",
+                                                                                "options":  {
+                                                                                                "size":  "L",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296483052",
+                                                                                "options":  {
+                                                                                                "size":  "XL",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / 2XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296777964",
+                                                                                "options":  {
+                                                                                                "size":  "2XL",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / 3XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540296941804",
+                                                                                "options":  {
+                                                                                                "size":  "3XL",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            },
+                                                                            {
+                                                                                "price":  "30.99",
+                                                                                "title":  "Skin color / 4XL",
+                                                                                "id":  "gid://shopify/ProductVariant/47540297007340",
+                                                                                "options":  {
+                                                                                                "size":  "4XL",
+                                                                                                "color":  "Skin color"
+                                                                                            }
+                                                                            }
+                                                                        ],
+                                                           "id":  "gid://shopify/Product/9226374611180"
+                                                       },
+    "mens-body-shaper-waist-trainer-for-tummy-control":  {
+                                                             "title":  "Structure Shaping Vest",
+                                                             "handle":  "mens-body-shaper-waist-trainer-for-tummy-control",
+                                                             "variants":  [
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "Black / M",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471068938476",
+                                                                                  "options":  {
+                                                                                                  "size":  "M",
+                                                                                                  "color":  "Black"
+                                                                                              }
+                                                                              },
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "Black / L",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471068840172",
+                                                                                  "options":  {
+                                                                                                  "size":  "L",
+                                                                                                  "color":  "Black"
+                                                                                              }
+                                                                              },
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "Black / XL",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471068905708",
+                                                                                  "options":  {
+                                                                                                  "size":  "XL",
+                                                                                                  "color":  "Black"
+                                                                                              }
+                                                                              },
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "White / M",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471069004012",
+                                                                                  "options":  {
+                                                                                                  "size":  "M",
+                                                                                                  "color":  "White"
+                                                                                              }
+                                                                              },
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "White / L",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471068872940",
+                                                                                  "options":  {
+                                                                                                  "size":  "L",
+                                                                                                  "color":  "White"
+                                                                                              }
+                                                                              },
+                                                                              {
+                                                                                  "price":  "35.99",
+                                                                                  "title":  "White / XL",
+                                                                                  "id":  "gid://shopify/ProductVariant/47471068971244",
+                                                                                  "options":  {
+                                                                                                  "size":  "XL",
+                                                                                                  "color":  "White"
+                                                                                              }
+                                                                              }
+                                                                          ],
+                                                             "id":  "gid://shopify/Product/9211631272172"
+                                                         },
+    "mens-compression-shaper-vest":  {
+                                         "title":  "CoreAlign Compression Vest",
+                                         "handle":  "mens-compression-shaper-vest",
+                                         "variants":  [
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "Black / S",
+                                                              "id":  "gid://shopify/ProductVariant/48004092821740",
+                                                              "options":  {
+                                                                              "size":  "S",
+                                                                              "color":  "Black"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "Black / M",
+                                                              "id":  "gid://shopify/ProductVariant/48004092887276",
+                                                              "options":  {
+                                                                              "size":  "M",
+                                                                              "color":  "Black"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "Black / L",
+                                                              "id":  "gid://shopify/ProductVariant/48004092920044",
+                                                              "options":  {
+                                                                              "size":  "L",
+                                                                              "color":  "Black"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "Black / XL",
+                                                              "id":  "gid://shopify/ProductVariant/48004092854508",
+                                                              "options":  {
+                                                                              "size":  "XL",
+                                                                              "color":  "Black"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "Black / 2XL",
+                                                              "id":  "gid://shopify/ProductVariant/48004092952812",
+                                                              "options":  {
+                                                                              "size":  "2XL",
+                                                                              "color":  "Black"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "White / S",
+                                                              "id":  "gid://shopify/ProductVariant/48004092690668",
+                                                              "options":  {
+                                                                              "size":  "S",
+                                                                              "color":  "White"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "White / M",
+                                                              "id":  "gid://shopify/ProductVariant/48004092723436",
+                                                              "options":  {
+                                                                              "size":  "M",
+                                                                              "color":  "White"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "White / L",
+                                                              "id":  "gid://shopify/ProductVariant/48004092756204",
+                                                              "options":  {
+                                                                              "size":  "L",
+                                                                              "color":  "White"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "White / XL",
+                                                              "id":  "gid://shopify/ProductVariant/48004092657900",
+                                                              "options":  {
+                                                                              "size":  "XL",
+                                                                              "color":  "White"
+                                                                          }
+                                                          },
+                                                          {
+                                                              "price":  "34.99",
+                                                              "title":  "White / 2XL",
+                                                              "id":  "gid://shopify/ProductVariant/48004092788972",
+                                                              "options":  {
+                                                                              "size":  "2XL",
+                                                                              "color":  "White"
+                                                                          }
+                                                          }
+                                                      ],
+                                         "id":  "gid://shopify/Product/9327207186668"
+                                     },
+    "mens-compression-workout-suit":  {
+                                          "title":  "Ascend Compression Suit",
+                                          "handle":  "mens-compression-workout-suit",
+                                          "variants":  [
+                                                           {
+                                                               "price":  "38.99",
+                                                               "title":  "Black-Red / M",
+                                                               "id":  "gid://shopify/ProductVariant/47540281049324",
+                                                               "options":  {
+                                                                               "size":  "M",
+                                                                               "color":  "Black-Red"
+                                                                           }
+                                                           },
+                                                           {
+                                                               "price":  "38.99",
+                                                               "title":  "Black-Red / L",
+                                                               "id":  "gid://shopify/ProductVariant/47540281245932",
+                                                               "options":  {
+                                                                               "size":  "L",
+                                                                               "color":  "Black-Red"
+                                                                           }
+                                                           },
+                                                           {
+                                                               "price":  "38.99",
+                                                               "title":  "Black-Red / XL",
+                                                               "id":  "gid://shopify/ProductVariant/47540281180396",
+                                                               "options":  {
+                                                                               "size":  "XL",
+                                                                               "color":  "Black-Red"
+                                                                           }
+                                                           }
+                                                       ],
+                                          "id":  "gid://shopify/Product/9226371956972"
+                                      },
+    "womens-seamless-moisture-wicking-yoga-t-shirt":  {
+                                                          "title":  "AeroSoft Yoga T-Shirt",
+                                                          "handle":  "womens-seamless-moisture-wicking-yoga-t-shirt",
+                                                          "variants":  [
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Watermelon Red / S",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359463148",
+                                                                               "options":  {
+                                                                                               "size":  "S",
+                                                                                               "color":  "Watermelon Red"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Watermelon Red / M",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358938860",
+                                                                               "options":  {
+                                                                                               "size":  "M",
+                                                                                               "color":  "Watermelon Red"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Watermelon Red / L",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358971628",
+                                                                               "options":  {
+                                                                                               "size":  "L",
+                                                                                               "color":  "Watermelon Red"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Black / S",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359430380",
+                                                                               "options":  {
+                                                                                               "size":  "S",
+                                                                                               "color":  "Black"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Black / M",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359266540",
+                                                                               "options":  {
+                                                                                               "size":  "M",
+                                                                                               "color":  "Black"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Black / L",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359332076",
+                                                                               "options":  {
+                                                                                               "size":  "L",
+                                                                                               "color":  "Black"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Light Blue / S",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358873324",
+                                                                               "options":  {
+                                                                                               "size":  "S",
+                                                                                               "color":  "Light Blue"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Light Blue / M",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358807788",
+                                                                               "options":  {
+                                                                                               "size":  "M",
+                                                                                               "color":  "Light Blue"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Light Blue / L",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358709484",
+                                                                               "options":  {
+                                                                                               "size":  "L",
+                                                                                               "color":  "Light Blue"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Army Green / S",
+                                                                               "id":  "gid://shopify/ProductVariant/47540358906092",
+                                                                               "options":  {
+                                                                                               "size":  "S",
+                                                                                               "color":  "Army Green"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Army Green / M",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359004396",
+                                                                               "options":  {
+                                                                                               "size":  "M",
+                                                                                               "color":  "Army Green"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Army Green / L",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359037164",
+                                                                               "options":  {
+                                                                                               "size":  "L",
+                                                                                               "color":  "Army Green"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Grey / S",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359102700",
+                                                                               "options":  {
+                                                                                               "size":  "S",
+                                                                                               "color":  "Grey"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Grey / M",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359495916",
+                                                                               "options":  {
+                                                                                               "size":  "M",
+                                                                                               "color":  "Grey"
+                                                                                           }
+                                                                           },
+                                                                           {
+                                                                               "price":  "29.99",
+                                                                               "title":  "Grey / L",
+                                                                               "id":  "gid://shopify/ProductVariant/47540359561452",
+                                                                               "options":  {
+                                                                                               "size":  "L",
+                                                                                               "color":  "Grey"
+                                                                                           }
+                                                                           }
+                                                                       ],
+                                                          "id":  "gid://shopify/Product/9226382147820"
+                                                      },
+    "compression-shirt-pro-long-sleeve-running-t-shirt-one":  {
+                                                                  "title":  "Vector Compression T-Shirt",
+                                                                  "handle":  "compression-shirt-pro-long-sleeve-running-t-shirt-one",
+                                                                  "variants":  [
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / S",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540279345388",
+                                                                                       "options":  {
+                                                                                                       "size":  "S",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   },
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / M",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540279509228",
+                                                                                       "options":  {
+                                                                                                       "size":  "M",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   },
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / L",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540279673068",
+                                                                                       "options":  {
+                                                                                                       "size":  "L",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   },
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / XL",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540279836908",
+                                                                                       "options":  {
+                                                                                                       "size":  "XL",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   },
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / 2XL",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540280000748",
+                                                                                       "options":  {
+                                                                                                       "size":  "2XL",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   },
+                                                                                   {
+                                                                                       "price":  "33.99",
+                                                                                       "title":  "Black / 3XL",
+                                                                                       "id":  "gid://shopify/ProductVariant/47540280164588",
+                                                                                       "options":  {
+                                                                                                       "size":  "3XL",
+                                                                                                       "color":  "Black"
+                                                                                                   }
+                                                                                   }
+                                                                               ],
+                                                                  "id":  "gid://shopify/Product/9226371793132"
+                                                              },
+    "one-piece-body-shaping-jersey-with-front-zipper":  {
+                                                            "title":  "TrueShape Zip Bodysuit",
+                                                            "handle":  "one-piece-body-shaping-jersey-with-front-zipper",
+                                                            "variants":  [
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / S",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295696620",
+                                                                                 "options":  {
+                                                                                                 "size":  "S",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / M",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296188140",
+                                                                                 "options":  {
+                                                                                                 "size":  "M",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / L",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295991532",
+                                                                                 "options":  {
+                                                                                                 "size":  "L",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296089836",
+                                                                                 "options":  {
+                                                                                                 "size":  "XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / 2XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295925996",
+                                                                                 "options":  {
+                                                                                                 "size":  "2XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / 3XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295631084",
+                                                                                 "options":  {
+                                                                                                 "size":  "3XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / 4XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295663852",
+                                                                                 "options":  {
+                                                                                                 "size":  "4XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / 5XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295893228",
+                                                                                 "options":  {
+                                                                                                 "size":  "5XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Beige / 6XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296024300",
+                                                                                 "options":  {
+                                                                                                 "size":  "6XL",
+                                                                                                 "color":  "Beige"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / S",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295729388",
+                                                                                 "options":  {
+                                                                                                 "size":  "S",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / M",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296057068",
+                                                                                 "options":  {
+                                                                                                 "size":  "M",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / L",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295762156",
+                                                                                 "options":  {
+                                                                                                 "size":  "L",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295958764",
+                                                                                 "options":  {
+                                                                                                 "size":  "XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / 2XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296122604",
+                                                                                 "options":  {
+                                                                                                 "size":  "2XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / 3XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295827692",
+                                                                                 "options":  {
+                                                                                                 "size":  "3XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / 4XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540296155372",
+                                                                                 "options":  {
+                                                                                                 "size":  "4XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / 5XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295794924",
+                                                                                 "options":  {
+                                                                                                 "size":  "5XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             },
+                                                                             {
+                                                                                 "price":  "45.99",
+                                                                                 "title":  "Black / 6XL",
+                                                                                 "id":  "gid://shopify/ProductVariant/47540295860460",
+                                                                                 "options":  {
+                                                                                                 "size":  "6XL",
+                                                                                                 "color":  "Black"
+                                                                                             }
+                                                                             }
+                                                                         ],
+                                                            "id":  "gid://shopify/Product/9226374480108"
+                                                        },
+    "seamless-yoga-fitness-set":  {
+                                      "title":  "Pure Balance Ribbed Yoga Set",
+                                      "handle":  "seamless-yoga-fitness-set",
+                                      "variants":  [
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coral Pink / S",
+                                                           "id":  "gid://shopify/ProductVariant/47540291895532",
+                                                           "options":  {
+                                                                           "size":  "S",
+                                                                           "color":  "Coral Pink"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coral Pink / M",
+                                                           "id":  "gid://shopify/ProductVariant/47540291928300",
+                                                           "options":  {
+                                                                           "size":  "M",
+                                                                           "color":  "Coral Pink"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coral Pink / L",
+                                                           "id":  "gid://shopify/ProductVariant/47540291862764",
+                                                           "options":  {
+                                                                           "size":  "L",
+                                                                           "color":  "Coral Pink"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Khaki / S",
+                                                           "id":  "gid://shopify/ProductVariant/47540291961068",
+                                                           "options":  {
+                                                                           "size":  "S",
+                                                                           "color":  "Khaki"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Khaki / M",
+                                                           "id":  "gid://shopify/ProductVariant/47540291993836",
+                                                           "options":  {
+                                                                           "size":  "M",
+                                                                           "color":  "Khaki"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Khaki / L",
+                                                           "id":  "gid://shopify/ProductVariant/47540291698924",
+                                                           "options":  {
+                                                                           "size":  "L",
+                                                                           "color":  "Khaki"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Black / S",
+                                                           "id":  "gid://shopify/ProductVariant/47540291502316",
+                                                           "options":  {
+                                                                           "size":  "S",
+                                                                           "color":  "Black"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Black / M",
+                                                           "id":  "gid://shopify/ProductVariant/47540291764460",
+                                                           "options":  {
+                                                                           "size":  "M",
+                                                                           "color":  "Black"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Black / L",
+                                                           "id":  "gid://shopify/ProductVariant/47540292223212",
+                                                           "options":  {
+                                                                           "size":  "L",
+                                                                           "color":  "Black"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Lake Blue / S",
+                                                           "id":  "gid://shopify/ProductVariant/47540291010796",
+                                                           "options":  {
+                                                                           "size":  "S",
+                                                                           "color":  "Lake Blue"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Lake Blue / M",
+                                                           "id":  "gid://shopify/ProductVariant/47540290912492",
+                                                           "options":  {
+                                                                           "size":  "M",
+                                                                           "color":  "Lake Blue"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Lake Blue / L",
+                                                           "id":  "gid://shopify/ProductVariant/47540290945260",
+                                                           "options":  {
+                                                                           "size":  "L",
+                                                                           "color":  "Lake Blue"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coffee Brown / S",
+                                                           "id":  "gid://shopify/ProductVariant/47540292255980",
+                                                           "options":  {
+                                                                           "size":  "S",
+                                                                           "color":  "Coffee Brown"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coffee Brown / M",
+                                                           "id":  "gid://shopify/ProductVariant/47540292321516",
+                                                           "options":  {
+                                                                           "size":  "M",
+                                                                           "color":  "Coffee Brown"
+                                                                       }
+                                                       },
+                                                       {
+                                                           "price":  "40.99",
+                                                           "title":  "Coffee Brown / L",
+                                                           "id":  "gid://shopify/ProductVariant/47540292288748",
+                                                           "options":  {
+                                                                           "size":  "L",
+                                                                           "color":  "Coffee Brown"
+                                                                       }
+                                                       }
+                                                   ],
+                                      "id":  "gid://shopify/Product/9226373595372"
+                                  },
+    "womens-seamless-active-yoga-set":  {
+                                            "title":  "FlowState Yoga Set",
+                                            "handle":  "womens-seamless-active-yoga-set",
+                                            "variants":  [
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Rust red / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290552044",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Rust red"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Rust red / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290584812",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Rust red"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Rust red / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290617580",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Rust red"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Champagne / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540289929452",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Champagne"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Champagne / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540289962220",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Champagne"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Champagne / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540289994988",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Champagne"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Black / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290126060",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Black"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Black / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540289765612",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Black"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Black / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540289798380",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Black"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Grey / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290158828",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Grey"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Grey / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290191596",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Grey"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Grey / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290224364",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Grey"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Lavender / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290257132",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Lavender"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Lavender / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290289900",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Lavender"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Lavender / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290322668",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Lavender"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Taro / Small",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290650348",
+                                                                 "options":  {
+                                                                                 "size":  "Small",
+                                                                                 "color":  "Taro"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Taro / Medium",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290683116",
+                                                                 "options":  {
+                                                                                 "size":  "Medium",
+                                                                                 "color":  "Taro"
+                                                                             }
+                                                             },
+                                                             {
+                                                                 "price":  "47.99",
+                                                                 "title":  "Taro / Large",
+                                                                 "id":  "gid://shopify/ProductVariant/47540290715884",
+                                                                 "options":  {
+                                                                                 "size":  "Large",
+                                                                                 "color":  "Taro"
+                                                                             }
+                                                             }
+                                                         ],
+                                            "id":  "gid://shopify/Product/9226373497068"
+                                        },
+    "mens-breathable-cotton-vest-for-gym-sports-training":  {
+                                                                "title":  "ApexFit Gym Vest",
+                                                                "handle":  "mens-breathable-cotton-vest-for-gym-sports-training",
+                                                                "variants":  [
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Grey / M",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763772140",
+                                                                                     "options":  {
+                                                                                                     "size":  "M",
+                                                                                                     "color":  "Grey"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Grey / L",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763706604",
+                                                                                     "options":  {
+                                                                                                     "size":  "L",
+                                                                                                     "color":  "Grey"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Grey / XL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763641068",
+                                                                                     "options":  {
+                                                                                                     "size":  "XL",
+                                                                                                     "color":  "Grey"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Grey / XXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763477228",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXL",
+                                                                                                     "color":  "Grey"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Grey / XXXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763804908",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXXL",
+                                                                                                     "color":  "Grey"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Black / M",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763739372",
+                                                                                     "options":  {
+                                                                                                     "size":  "M",
+                                                                                                     "color":  "Black"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Black / L",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763411692",
+                                                                                     "options":  {
+                                                                                                     "size":  "L",
+                                                                                                     "color":  "Black"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Black / XL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763575532",
+                                                                                     "options":  {
+                                                                                                     "size":  "XL",
+                                                                                                     "color":  "Black"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Black / XXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763673836",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXL",
+                                                                                                     "color":  "Black"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "Black / XXXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763378924",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXXL",
+                                                                                                     "color":  "Black"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "White / M",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763444460",
+                                                                                     "options":  {
+                                                                                                     "size":  "M",
+                                                                                                     "color":  "White"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "White / L",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763542764",
+                                                                                     "options":  {
+                                                                                                     "size":  "L",
+                                                                                                     "color":  "White"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "White / XL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763346156",
+                                                                                     "options":  {
+                                                                                                     "size":  "XL",
+                                                                                                     "color":  "White"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "White / XXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763509996",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXL",
+                                                                                                     "color":  "White"
+                                                                                                 }
+                                                                                 },
+                                                                                 {
+                                                                                     "price":  "28.99",
+                                                                                     "title":  "White / XXXL",
+                                                                                     "id":  "gid://shopify/ProductVariant/47546763608300",
+                                                                                     "options":  {
+                                                                                                     "size":  "XXXL",
+                                                                                                     "color":  "White"
+                                                                                                 }
+                                                                                 }
+                                                                             ],
+                                                                "id":  "gid://shopify/Product/9226981900524"
+                                                            }
+}

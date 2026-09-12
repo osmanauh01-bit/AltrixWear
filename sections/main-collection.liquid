@@ -1,0 +1,222 @@
+<div class="section-spacing" style="padding-top: 130px;">
+  <div class="page-container">
+    <!-- Collection Editorial Header -->
+    <div class="section-header text-left" style="margin-bottom: var(--space-xl);">
+      <span class="eyebrow">Collection</span>
+      <h1>{{ collection.title | default: 'All Activewear & Compression' }}</h1>
+      <p>
+        {{ collection.description | default: 'High-performance activewear, compression layers, and supportive contours engineered for training, movement, and everyday confidence.' }}
+      </p>
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-xl);">
+      <div style="display: flex; gap: var(--space-sm); overflow-x: auto;">
+        <a href="/collections/all" class="btn btn-sm {% if collection.handle == 'all' or collection.handle == blank %}btn-primary{% else %}btn-secondary{% endif %}" data-filter="all">All (10)</a>
+        <a href="/collections/men" class="btn btn-sm {% if collection.handle == 'men' %}btn-primary{% else %}btn-secondary{% endif %}" data-filter="men">Men's (5)</a>
+        <a href="/collections/women" class="btn btn-sm {% if collection.handle == 'women' %}btn-primary{% else %}btn-secondary{% endif %}" data-filter="women">Women's (5)</a>
+        <a href="/collections/shapewear" class="btn btn-sm {% if collection.handle == 'shapewear' %}btn-primary{% else %}btn-secondary{% endif %}" data-filter="shapewear">Shapewear (4)</a>
+      </div>
+
+      <div style="font-size: 13px; font-weight: 600; color: var(--color-gray-dark);">
+        <span id="collection-product-count">10 Items</span>
+      </div>
+    </div>
+
+    <!-- Product Grid: 4-col desktop, 2-col mobile -->
+    <div class="product-grid">
+      {% if collection.products.size > 0 %}
+        {% for product in collection.products %}
+          {% render 'product-card', product: product %}
+        {% endfor %}
+      {% else %}
+        <!-- Product 1: Men -->
+        <div class="product-card" data-category="men shapewear">
+          <div class="product-card-media">
+            <a href="/products/corealign-compression-vest">
+              <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="CoreAlign Compression Vest" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="CoreAlign Compression Vest">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/corealign-compression-vest">CoreAlign Compression Vest</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$34.99</span><span class="product-price-compare">$44.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 2: Men -->
+        <div class="product-card" data-category="men">
+          <div class="product-card-media">
+            <a href="/products/apexfit-gym-vest">
+              <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="ApexFit Gym Vest" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="ApexFit Gym Vest">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/apexfit-gym-vest">ApexFit Gym Vest</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$28.99</span><span class="product-price-compare">$36.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 3: Women -->
+        <div class="product-card" data-category="women">
+          <div class="product-card-media">
+            <a href="/products/flowstate-yoga-set">
+              <img src="{{ 'prod-flowstate-set.jpg' | asset_url }}" alt="FlowState Yoga Set" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="FlowState Yoga Set">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/flowstate-yoga-set">FlowState Yoga Set</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$40.99</span><span class="product-price-compare">$52.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 4: Women -->
+        <div class="product-card" data-category="women">
+          <div class="product-card-media">
+            <a href="/products/pure-balance-ribbed-yoga-set">
+              <img src="{{ 'prod-ribbed-set.jpg' | asset_url }}" alt="Pure Balance Ribbed Yoga Set" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Pure Balance Ribbed Yoga Set">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/pure-balance-ribbed-yoga-set">Pure Balance Ribbed Yoga Set</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$40.99</span><span class="product-price-compare">$54.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 5: Women -->
+        <div class="product-card" data-category="women">
+          <div class="product-card-media">
+            <a href="/products/aerosoft-yoga-t-shirt">
+              <img src="{{ 'prod-aerosoft-tee.jpg' | asset_url }}" alt="AeroSoft Yoga T-Shirt" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="AeroSoft Yoga T-Shirt">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/aerosoft-yoga-t-shirt">AeroSoft Yoga T-Shirt</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$29.99</span><span class="product-price-compare">$38.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 6: Men -->
+        <div class="product-card" data-category="men">
+          <div class="product-card-media">
+            <a href="/products/vector-compression-t-shirt">
+              <img src="{{ 'prod-vector-compression.jpg' | asset_url }}" alt="Vector Compression T-Shirt" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Vector Compression T-Shirt">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/vector-compression-t-shirt">Vector Compression T-Shirt</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$33.99</span><span class="product-price-compare">$42.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 7: Men -->
+        <div class="product-card" data-category="men">
+          <div class="product-card-media">
+            <a href="/products/ascend-compression-suit">
+              <img src="{{ 'prod-vector-compression.jpg' | asset_url }}" alt="Ascend Compression Suit" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Ascend Compression Suit">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Activewear</span>
+            <h3 class="product-card-title"><a href="/products/ascend-compression-suit">Ascend Compression Suit</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$36.99</span><span class="product-price-compare">$48.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 8: Women's Shapewear -->
+        <div class="product-card" data-category="women shapewear">
+          <div class="product-card-media">
+            <a href="/products/second-skin-high-waist-shaper">
+              <img src="{{ 'prod-secondskin-shaper.jpg' | asset_url }}" alt="Second Skin High-Waist Shaper" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Second Skin High-Waist Shaper">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Shapewear</span>
+            <h3 class="product-card-title"><a href="/products/second-skin-high-waist-shaper">Second Skin High-Waist Shaper</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$45.99</span><span class="product-price-compare">$58.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 9: Women's Shapewear -->
+        <div class="product-card" data-category="women shapewear">
+          <div class="product-card-media">
+            <a href="/products/trueshape-zip-bodysuit">
+              <img src="{{ 'prod-secondskin-shaper.jpg' | asset_url }}" alt="TrueShape Zip Bodysuit" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="TrueShape Zip Bodysuit">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Women's Shapewear</span>
+            <h3 class="product-card-title"><a href="/products/trueshape-zip-bodysuit">TrueShape Zip Bodysuit</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$45.99</span><span class="product-price-compare">$59.99</span></div>
+          </div>
+        </div>
+
+        <!-- Product 10: Men's Shapewear -->
+        <div class="product-card" data-category="men shapewear">
+          <div class="product-card-media">
+            <a href="/products/structure-shaping-vest">
+              <img src="{{ 'prod-corealign-vest.jpg' | asset_url }}" alt="Structure Shaping Vest" class="product-card-img" loading="lazy" width="400" height="500">
+            </a>
+            <span class="product-card-badge">Sale</span>
+            <div class="product-card-quickadd">
+              <button type="button" class="btn btn-primary btn-sm btn-block" data-action="quick-add" data-product-title="Structure Shaping Vest">Quick Add</button>
+            </div>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-type">Men's Shapewear</span>
+            <h3 class="product-card-title"><a href="/products/structure-shaping-vest">Structure Shaping Vest</a></h3>
+            <div class="product-card-price"><span class="product-price-current">$34.99</span><span class="product-price-compare">$46.99</span></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Collection",
+  "settings": []
+}
+{% endschema %}

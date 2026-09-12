@@ -1,0 +1,65 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="page-container">
+    <div class="footer-top-grid">
+      <!-- Column 1: Brand -->
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="ALTRIXWEAR Home">
+          <img src="{{ 'logo-white.png' | asset_url }}" alt="ALTRIXWEAR" width="136" height="32">
+        </a>
+        <p class="footer-brand-desc">
+          Stylish, functional activewear for training, movement and everyday confidence. Built for the work in between.
+        </p>
+        <div style="font-size: 13px; color: rgba(255, 255, 255, 0.65); line-height: 1.5;">
+          <p><strong>Estimated US Delivery:</strong> 8&ndash;12 business days</p>
+          <p><strong>Support:</strong> support@altrixwear.com</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Collections -->
+      <div>
+        <h4 class="footer-column-title">COLLECTIONS</h4>
+        <ul class="footer-links">
+          <li><a href="/collections/all" class="footer-link">All Activewear</a></li>
+          <li><a href="/collections/men" class="footer-link">Men's Gymwear</a></li>
+          <li><a href="/collections/women" class="footer-link">Women's Activewear</a></li>
+          <li><a href="/collections/shapewear" class="footer-link">Shapewear Collection</a></li>
+          <li><a href="/collections/best-sellers" class="footer-link">Best Sellers</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Customer Support -->
+      <div>
+        <h4 class="footer-column-title">SUPPORT</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/shipping" class="footer-link">Shipping Information</a></li>
+          <li><a href="/pages/returns" class="footer-link">Defect & Return Policy</a></li>
+          <li><a href="/policies/privacy-policy" class="footer-link">Privacy Policy</a></li>
+          <li><a href="/policies/terms-of-service" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Social -->
+      <div>
+        <h4 class="footer-column-title">LEGAL & SOCIAL</h4>
+        <ul class="footer-links">
+          <li><a href="/pages/contact" class="footer-link">Contact Customer Care</a></li>
+          <li><a href="/pages/about" class="footer-link">About AltrixWear</a></li>
+          <li style="margin-top: 8px;">
+            <a href="https://instagram.com/altrixwear" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram &rarr;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} ALTRIXWEAR. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}

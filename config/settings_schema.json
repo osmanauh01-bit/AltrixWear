@@ -1,0 +1,120 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "ALTRIXWEAR V2",
+    "theme_version": "2.0.0",
+    "theme_author": "ALTRIXWEAR",
+    "theme_documentation_url": "https://altrixwear.com",
+    "theme_support_url": "mailto:support@altrixwear.com"
+  },
+  {
+    "name": "Brand Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_black",
+        "label": "Pure Black",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_dark",
+        "label": "Near Black / Header Pill",
+        "default": "#111111"
+      },
+      {
+        "type": "color",
+        "id": "color_charcoal",
+        "label": "Charcoal",
+        "default": "#222222"
+      },
+      {
+        "type": "color",
+        "id": "color_gray_dark",
+        "label": "Dark Gray",
+        "default": "#444444"
+      },
+      {
+        "type": "color",
+        "id": "color_gray",
+        "label": "Medium Gray",
+        "default": "#666666"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Border Neutral",
+        "default": "#E5E5E5"
+      },
+      {
+        "type": "color",
+        "id": "color_off_white",
+        "label": "Off-White Section BG",
+        "default": "#F7F7F7"
+      },
+      {
+        "type": "color",
+        "id": "color_white",
+        "label": "Pure White",
+        "default": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "name": "Shipping & Logistics",
+    "settings": [
+      {
+        "type": "text",
+        "id": "processing_time",
+        "label": "Order Processing Time",
+        "default": "2–4 business days"
+      },
+      {
+        "type": "text",
+        "id": "delivery_time",
+        "label": "Estimated Total Delivery",
+        "default": "8–12 business days"
+      },
+      {
+        "type": "text",
+        "id": "support_email",
+        "label": "Customer Support Email",
+        "default": "support@altrixwear.com"
+      }
+    ]
+  },
+  {
+    "name": "Social Links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram Handle / URL",
+        "default": "https://instagram.com/altrixwear"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok",
+        "label": "TikTok Handle / URL",
+        "default": "https://tiktok.com/@altrixwear"
+      }
+    ]
+  },
+  {
+    "name": "Size Guide Modal",
+    "settings": [
+      {
+        "type": "text",
+        "id": "size_guide_heading",
+        "label": "Modal Heading",
+        "default": "ALTRIXWEAR Size Guide"
+      },
+      {
+        "type": "page",
+        "id": "size_guide_page",
+        "label": "Global Size Guide Page (Optional)",
+        "info": "Link a page created under Online Store > Pages to edit your size guide directly from Shopify backend."
+      }
+    ]
+  }
+]
