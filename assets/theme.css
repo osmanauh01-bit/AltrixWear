@@ -2593,3 +2593,357 @@ input[type="search"]::-ms-clear {
   color: var(--color-near-black);
 }
 
+/* ==========================================================================
+   Firebase Authentication: Apple & Google Sign-In Components
+   ========================================================================== */
+.btn-apple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: var(--radius-sm, 6px);
+  font-family: var(--font-primary, inherit);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn-apple:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  transform: translateY(-1px);
+}
+
+.btn-apple:active {
+  background-color: #333333;
+  transform: translateY(0);
+}
+
+.btn-apple svg {
+  flex-shrink: 0;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 20px;
+  background-color: #ffffff;
+  color: #3c4043;
+  border: 1px solid #dadce0;
+  border-radius: var(--radius-sm, 6px);
+  font-family: var(--font-primary, inherit);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.btn-google:hover {
+  background-color: #f8f9fa;
+  border-color: #c6c8cc;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.btn-google:active {
+  background-color: #eeeeee;
+  transform: translateY(0);
+}
+
+.btn-google svg {
+  flex-shrink: 0;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 22px 0;
+  color: var(--color-gray-dark, #767676);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border, #e5e5e5);
+}
+
+.auth-divider span {
+  padding: 0 14px;
+}
+
+/* ==========================================================================
+   Logged-in Customer Dashboard (Firestore Database Powered)
+   ========================================================================== */
+
+.customer-dashboard {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.customer-dashboard.is-active {
+  display: block;
+}
+
+.dashboard-user-card {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border-radius: var(--radius-md, 8px);
+  padding: 28px;
+  margin-bottom: var(--space-xl, 32px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-user-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dashboard-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.dashboard-user-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.apple-verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.dashboard-user-email {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+.dashboard-member-tier {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.dashboard-signout-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-sm, 6px);
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-signout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Dashboard Segmented Nav */
+.dashboard-nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.dashboard-nav-btn {
+  padding: 12px 18px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-gray-dark, #767676);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dashboard-nav-btn:hover {
+  color: var(--color-near-black, #111111);
+}
+
+.dashboard-nav-btn.is-active {
+  color: var(--color-near-black, #111111);
+  border-bottom-color: var(--color-near-black, #111111);
+}
+
+.dashboard-tab-panel {
+  display: none;
+}
+
+.dashboard-tab-panel.is-active {
+  display: block;
+}
+
+/* Order Cards */
+.dash-order-card {
+  border: 1px solid var(--color-border, #e5e5e5);
+  border-radius: var(--radius-sm, 6px);
+  padding: 20px;
+  margin-bottom: 16px;
+  background: var(--color-white, #ffffff);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dash-order-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.dash-order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  margin-bottom: 14px;
+}
+
+.dash-order-id {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-near-black, #111111);
+}
+
+.dash-order-date {
+  font-size: 12px;
+  color: var(--color-gray-dark, #767676);
+}
+
+.dash-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.dash-order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-order-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.dash-order-footer {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-border, #e5e5e5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+/* Address Card & Form */
+.dash-address-card {
+  border: 1px solid var(--color-border, #e5e5e5);
+  border-radius: var(--radius-sm, 6px);
+  padding: 24px;
+  background: var(--color-white, #ffffff);
+}
+
+/* Floating Header Avatar */
+.header-pill-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ffffff;
+  display: block;
+}
+
+

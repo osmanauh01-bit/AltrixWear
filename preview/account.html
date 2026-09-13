@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -94,123 +94,260 @@
     <div class="page-container">
       <div class="account-wrapper">
         <div class="account-header">
-          <span class="eyebrow">Customer Portal</span>
-          <h1>MY ACCOUNT</h1>
-          <p>Sign in to view orders, manage addresses, and access member perks.</p>
+          <span class="eyebrow" id="account-portal-eyebrow">Customer Portal</span>
+          <h1 id="account-portal-title">MY ACCOUNT</h1>
+          <p id="account-portal-desc">Sign in with Google or your email to track orders, manage addresses, and access member perks.</p>
         </div>
 
-        <!-- Segmented Tab Bar -->
-        <div class="account-tabs" role="tablist" aria-label="Account Tabs">
-          <button type="button" class="account-tab-btn is-active" id="tab-btn-signin" data-tab="signin" role="tab" aria-selected="true" aria-controls="panel-signin">Sign In</button>
-          <button type="button" class="account-tab-btn" id="tab-btn-register" data-tab="register" role="tab" aria-selected="false" aria-controls="panel-register">Create Account</button>
-          <button type="button" class="account-tab-btn" id="tab-btn-orders" data-tab="orders" role="tab" aria-selected="false" aria-controls="panel-orders">Order Status</button>
-        </div>
+        <!-- Alert Notification Box -->
+        <div id="account-alert" style="display: none; padding: 12px 18px; border-radius: 6px; margin-bottom: 20px; font-size: 13px; font-weight: 600; text-align: center;"></div>
 
-        <div class="account-card">
-          <!-- Panel 1: Sign In -->
-          <div id="panel-signin" class="account-form-panel is-active" role="tabpanel" aria-labelledby="tab-btn-signin">
-            <form id="form-signin" onsubmit="event.preventDefault(); showAccountNotification('Customer Account API endpoint configured. Will authenticate via Shopify once live credentials are set.');">
-              <div class="account-field-group">
-                <label for="signin-email" class="account-label">Email Address</label>
-                <div class="account-input-wrapper">
-                  <input type="email" id="signin-email" name="customer[email]" class="account-input" placeholder="name@example.com" required autocomplete="email">
-                </div>
+        <!-- Container 1: Auth Forms (Shown when Logged Out) -->
+        <div id="account-auth-container">
+          <!-- Segmented Tab Bar -->
+          <div class="account-tabs" role="tablist" aria-label="Account Tabs">
+            <button type="button" class="account-tab-btn is-active" id="tab-btn-signin" data-tab="signin" role="tab" aria-selected="true" aria-controls="panel-signin">Sign In</button>
+            <button type="button" class="account-tab-btn" id="tab-btn-register" data-tab="register" role="tab" aria-selected="false" aria-controls="panel-register">Create Account</button>
+            <button type="button" class="account-tab-btn" id="tab-btn-orders" data-tab="orders" role="tab" aria-selected="false" aria-controls="panel-orders">Order Status</button>
+          </div>
+
+          <div class="account-card">
+            <!-- Panel 1: Sign In -->
+            <div id="panel-signin" class="account-form-panel is-active" role="tabpanel" aria-labelledby="tab-btn-signin">
+              <!-- Social Sign-In Buttons -->
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 6px;">
+                <!-- Google One-Click Sign-In -->
+                <button type="button" class="btn-google" id="btn-google-signin" aria-label="Continue with Google">
+                  <svg width="18" height="18" viewBox="0 0 18 18">
+                    <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z"/>
+                    <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+                    <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.173 0 7.549 0 9s.347 2.827.957 4.039l3.007-2.332z"/>
+                    <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z"/>
+                  </svg>
+                  Continue with Google
+                </button>
               </div>
 
-              <div class="account-field-group">
-                <label for="signin-password" class="account-label">Password</label>
-                <div class="account-input-wrapper">
-                  <input type="password" id="signin-password" name="customer[password]" class="account-input" placeholder="••••••••" required autocomplete="current-password">
-                  <button type="button" class="account-pwd-toggle" data-toggle-target="signin-password">Show</button>
-                </div>
-              </div>
+              <div class="auth-divider"><span>OR SIGN IN WITH EMAIL</span></div>
 
-              <div class="account-form-meta">
-                <label class="account-checkbox-label">
-                  <input type="checkbox" name="remember_me" checked style="accent-color: var(--color-near-black);">
-                  <span>Remember me</span>
-                </label>
-                <button type="button" class="account-forgot-link" id="trigger-forgot-pwd">Forgot password?</button>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-            </form>
-
-            <!-- Forgot Password Panel (Inline) -->
-            <div id="panel-forgot" style="display: none; margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--color-border);">
-              <h3 style="font-size: 16px; margin-bottom: 6px;">Reset Password</h3>
-              <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: var(--space-md);">Enter your account email and we'll send a password recovery link.</p>
-              <form id="form-forgot" onsubmit="event.preventDefault(); showAccountNotification('Recovery email instructions sent. Please check your inbox.');">
+              <form id="form-signin">
                 <div class="account-field-group">
-                  <label for="recover-email" class="account-label">Account Email</label>
-                  <input type="email" id="recover-email" class="account-input" placeholder="name@example.com" required>
+                  <label for="signin-email" class="account-label">Email Address</label>
+                  <div class="account-input-wrapper">
+                    <input type="email" id="signin-email" name="customer[email]" class="account-input" placeholder="name@example.com" required autocomplete="email">
+                  </div>
                 </div>
-                <div style="display: flex; gap: 10px; margin-top: var(--space-md);">
-                  <button type="submit" class="btn btn-primary btn-sm" style="flex: 1;">Send Recovery Link</button>
-                  <button type="button" class="btn btn-secondary btn-sm" id="cancel-forgot-pwd">Cancel</button>
+
+                <div class="account-field-group">
+                  <label for="signin-password" class="account-label">Password</label>
+                  <div class="account-input-wrapper">
+                    <input type="password" id="signin-password" name="customer[password]" class="account-input" placeholder="••••••••" required autocomplete="current-password">
+                    <button type="button" class="account-pwd-toggle" data-toggle-target="signin-password">Show</button>
+                  </div>
                 </div>
+
+                <div class="account-form-meta">
+                  <label class="account-checkbox-label">
+                    <input type="checkbox" name="remember_me" checked style="accent-color: var(--color-near-black);">
+                    <span>Remember me</span>
+                  </label>
+                  <button type="button" class="account-forgot-link" id="trigger-forgot-pwd">Forgot password?</button>
+                </div>
+
+                <button type="submit" id="btn-submit-signin" class="btn btn-primary btn-block">Sign In with Email</button>
+              </form>
+
+              <!-- Forgot Password Panel (Inline) -->
+              <div id="panel-forgot" style="display: none; margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--color-border);">
+                <h3 style="font-size: 16px; margin-bottom: 6px;">Reset Password</h3>
+                <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: var(--space-md);">Enter your account email and we'll send a password recovery link via Firebase.</p>
+                <form id="form-forgot">
+                  <div class="account-field-group">
+                    <label for="recover-email" class="account-label">Account Email</label>
+                    <input type="email" id="recover-email" class="account-input" placeholder="name@example.com" required>
+                  </div>
+                  <div style="display: flex; gap: 10px; margin-top: var(--space-md);">
+                    <button type="submit" class="btn btn-primary btn-sm" style="flex: 1;">Send Recovery Link</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="cancel-forgot-pwd">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Panel 2: Create Account -->
+            <div id="panel-register" class="account-form-panel" role="tabpanel" aria-labelledby="tab-btn-register">
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 6px;">
+                <!-- Google One-Click Sign-Up -->
+                <button type="button" class="btn-google" id="btn-google-register" aria-label="Sign up with Google">
+                  <svg width="18" height="18" viewBox="0 0 18 18">
+                    <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z"/>
+                    <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+                    <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.173 0 7.549 0 9s.347 2.827.957 4.039l3.007-2.332z"/>
+                    <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z"/>
+                  </svg>
+                  Sign up with Google
+                </button>
+              </div>
+
+              <div class="auth-divider"><span>OR REGISTER WITH EMAIL</span></div>
+
+              <form id="form-register">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                  <div class="account-field-group">
+                    <label for="reg-first-name" class="account-label">First Name</label>
+                    <input type="text" id="reg-first-name" name="customer[first_name]" class="account-input" placeholder="First" required autocomplete="given-name">
+                  </div>
+                  <div class="account-field-group">
+                    <label for="reg-last-name" class="account-label">Last Name</label>
+                    <input type="text" id="reg-last-name" name="customer[last_name]" class="account-input" placeholder="Last" required autocomplete="family-name">
+                  </div>
+                </div>
+
+                <div class="account-field-group">
+                  <label for="reg-email" class="account-label">Email Address</label>
+                  <input type="email" id="reg-email" name="customer[email]" class="account-input" placeholder="name@example.com" required autocomplete="email">
+                </div>
+
+                <div class="account-field-group">
+                  <label for="reg-password" class="account-label">Create Password</label>
+                  <div class="account-input-wrapper">
+                    <input type="password" id="reg-password" name="customer[password]" class="account-input" placeholder="Minimum 6 characters" minlength="6" required autocomplete="new-password">
+                    <button type="button" class="account-pwd-toggle" data-toggle-target="reg-password">Show</button>
+                  </div>
+                </div>
+
+                <div class="account-field-group" style="margin-bottom: var(--space-lg);">
+                  <label class="account-checkbox-label">
+                    <input type="checkbox" name="customer[accepts_marketing]" checked style="accent-color: var(--color-near-black);">
+                    <span style="font-size: 12px; line-height: 1.4;">Send me updates on new activewear drops, VIP sales, and performance gear innovations.</span>
+                  </label>
+                </div>
+
+                <button type="submit" id="btn-submit-register" class="btn btn-primary btn-block">Create Account</button>
+              </form>
+            </div>
+
+            <!-- Panel 3: Order Status -->
+            <div id="panel-orders" class="account-form-panel" role="tabpanel" aria-labelledby="tab-btn-orders">
+              <form id="form-order-lookup">
+                <div class="account-field-group">
+                  <label for="lookup-order" class="account-label">Order Number</label>
+                  <input type="text" id="lookup-order" class="account-input" placeholder="e.g. #AX1082" required>
+                </div>
+
+                <div class="account-field-group">
+                  <label for="lookup-email" class="account-label">Billing Email or Phone</label>
+                  <input type="text" id="lookup-email" class="account-input" placeholder="Email or Phone on order" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="margin-top: var(--space-md);">Check Order Status</button>
+
+                <div class="account-api-badge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  <span>Estimated US Delivery: 8–12 Business Days via USPS with live tracking.</span>
+                </div>
+              </form>
+
+              <!-- Order Lookup Result Display -->
+              <div id="order-lookup-result" style="display: none; margin-top: 20px; padding: 18px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-off-white);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container 2: Customer Dashboard (Shown when Logged In via Firebase) -->
+        <div id="customer-dashboard" class="customer-dashboard" style="display: none;">
+          <!-- Profile Card -->
+          <div class="dashboard-user-card">
+            <div class="dashboard-user-header">
+              <div class="dashboard-user-info">
+                <img id="dash-user-avatar" src="" alt="User Avatar" class="dashboard-avatar" style="display: none;">
+                <div id="dash-user-initials" class="dashboard-avatar">A</div>
+                <div>
+                  <div class="dashboard-user-name">
+                    <span id="dash-user-name">Member</span>
+                    <span id="dash-google-badge" class="google-verified-badge" style="display: none;">
+                      <svg width="12" height="12" viewBox="0 0 18 18">
+                        <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z"/>
+                        <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+                        <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.173 0 7.549 0 9s.347 2.827.957 4.039l3.007-2.332z"/>
+                        <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z"/>
+                      </svg>
+                      Google Verified
+                    </span>
+                  </div>
+                  <div id="dash-user-email" class="dashboard-user-email"></div>
+                  <span id="dash-user-tier" class="dashboard-member-tier">ALTRIX CLUB • VIP ACCESS</span>
+                </div>
+              </div>
+              <button type="button" id="btn-dash-signout" class="dashboard-signout-btn">Sign Out</button>
+            </div>
+          </div>
+
+          <!-- Dashboard Navigation Tabs -->
+          <div class="dashboard-nav" role="tablist">
+            <button type="button" class="dashboard-nav-btn is-active" data-dash-tab="dash-orders">My Orders (<span id="dash-order-count">0</span>)</button>
+            <button type="button" class="dashboard-nav-btn" data-dash-tab="dash-addresses">Shipping Address</button>
+            <button type="button" class="dashboard-nav-btn" data-dash-tab="dash-support">Support & VIP Care</button>
+          </div>
+
+          <!-- Tab 1: Orders (Firestore Database Synced) -->
+          <div id="panel-dash-orders" class="dashboard-tab-panel is-active">
+            <div id="dash-orders-container">
+              <!-- Rendered dynamically from Firestore -->
+            </div>
+          </div>
+
+          <!-- Tab 2: Shipping Address (Firestore Database Synced) -->
+          <div id="panel-dash-addresses" class="dashboard-tab-panel">
+            <div class="dash-address-card">
+              <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 6px;">Default Delivery Address</h3>
+              <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: 20px;">Stored securely in Cloud Firestore for express 1-click checkout.</p>
+              
+              <form id="form-dash-address">
+                <div class="account-field-group">
+                  <label class="account-label">Full Name</label>
+                  <input type="text" id="addr-name" class="account-input" required>
+                </div>
+                <div class="account-field-group">
+                  <label class="account-label">Street Address</label>
+                  <input type="text" id="addr-street" class="account-input" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px;">
+                  <div class="account-field-group">
+                    <label class="account-label">City</label>
+                    <input type="text" id="addr-city" class="account-input" required>
+                  </div>
+                  <div class="account-field-group">
+                    <label class="account-label">State</label>
+                    <input type="text" id="addr-state" class="account-input" required>
+                  </div>
+                  <div class="account-field-group">
+                    <label class="account-label">ZIP Code</label>
+                    <input type="text" id="addr-zip" class="account-input" required>
+                  </div>
+                </div>
+                <div class="account-field-group">
+                  <label class="account-label">Phone Number</label>
+                  <input type="tel" id="addr-phone" class="account-input" required>
+                </div>
+                <button type="submit" id="btn-save-address" class="btn btn-primary" style="margin-top: 10px;">Save Address to Cloud Database</button>
               </form>
             </div>
           </div>
 
-          <!-- Panel 2: Create Account -->
-          <div id="panel-register" class="account-form-panel" role="tabpanel" aria-labelledby="tab-btn-register">
-            <form id="form-register" onsubmit="event.preventDefault(); showAccountNotification('Account registration form ready. Will submit directly to Shopify Customer Accounts.');">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                <div class="account-field-group">
-                  <label for="reg-first-name" class="account-label">First Name</label>
-                  <input type="text" id="reg-first-name" name="customer[first_name]" class="account-input" placeholder="First" required autocomplete="given-name">
-                </div>
-                <div class="account-field-group">
-                  <label for="reg-last-name" class="account-label">Last Name</label>
-                  <input type="text" id="reg-last-name" name="customer[last_name]" class="account-input" placeholder="Last" required autocomplete="family-name">
-                </div>
+          <!-- Tab 3: Customer Care -->
+          <div id="panel-dash-support" class="dashboard-tab-panel">
+            <div class="dash-address-card">
+              <h3 style="font-size: 17px; font-weight: 800; margin-bottom: 8px;">VIP Customer Care</h3>
+              <p style="font-size: 14px; color: var(--color-gray-dark); line-height: 1.6; margin-bottom: 16px;">
+                As an Altrix Club member, you receive expedited 24-hour priority email support and guaranteed seamless size exchanges.
+              </p>
+              <div style="background: var(--color-off-white); padding: 16px; border-radius: 6px; font-size: 13px;">
+                <p><strong>Direct Priority Email:</strong> <a href="mailto:support@altrixwear.com" style="text-decoration: underline; color: var(--color-near-black);">support@altrixwear.com</a></p>
+                <p style="margin-top: 6px;"><strong>USPS Shipping Window:</strong> 8–12 business days nationwide.</p>
+                <p style="margin-top: 6px;"><strong>Returns & Exchanges:</strong> 30-day hassle-free policy for defect items and sizing adjustments.</p>
               </div>
-
-              <div class="account-field-group">
-                <label for="reg-email" class="account-label">Email Address</label>
-                <input type="email" id="reg-email" name="customer[email]" class="account-input" placeholder="name@example.com" required autocomplete="email">
-              </div>
-
-              <div class="account-field-group">
-                <label for="reg-password" class="account-label">Create Password</label>
-                <div class="account-input-wrapper">
-                  <input type="password" id="reg-password" name="customer[password]" class="account-input" placeholder="Minimum 6 characters" minlength="6" required autocomplete="new-password">
-                  <button type="button" class="account-pwd-toggle" data-toggle-target="reg-password">Show</button>
-                </div>
-              </div>
-
-              <div class="account-field-group" style="margin-bottom: var(--space-lg);">
-                <label class="account-checkbox-label">
-                  <input type="checkbox" name="customer[accepts_marketing]" checked style="accent-color: var(--color-near-black);">
-                  <span style="font-size: 12px; line-height: 1.4;">Send me updates on new activewear drops, VIP sales, and performance gear innovations.</span>
-                </label>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block">Create Account</button>
-            </form>
-          </div>
-
-          <!-- Panel 3: Order Status -->
-          <div id="panel-orders" class="account-form-panel" role="tabpanel" aria-labelledby="tab-btn-orders">
-            <form id="form-order-lookup" onsubmit="event.preventDefault(); showAccountNotification('Checking order status with USPS carrier integration...');">
-              <div class="account-field-group">
-                <label for="lookup-order" class="account-label">Order Number</label>
-                <input type="text" id="lookup-order" class="account-input" placeholder="e.g. #AX1082" required>
-              </div>
-
-              <div class="account-field-group">
-                <label for="lookup-email" class="account-label">Billing Email or Phone</label>
-                <input type="text" id="lookup-email" class="account-input" placeholder="Email or Phone on order" required>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" style="margin-top: var(--space-md);">Check Order Status</button>
-
-              <div class="account-api-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                <span>Estimated US Delivery: 8–12 Business Days via USPS with live tracking.</span>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -391,9 +528,14 @@
     </div>
   </div>
 
+  <!-- Firebase SDK (Compat CDN for zero-bundler instant Vercel deployment) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="../assets/firebase-app.js"></script>
   <script src="../assets/theme.js"></script>
   <script>
-    // Tab Switching
+    // Tab Switching for Auth Forms
     document.querySelectorAll('.account-tab-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.account-tab-btn').forEach(b => {
@@ -445,8 +587,307 @@
       forgotCancel.addEventListener('click', () => forgotPanel.style.display = 'none');
     }
 
-    function showAccountNotification(msg) {
-      alert(msg);
+    // Banner notification helper
+    let notificationTimer = null;
+    function showNotification(msg, type = 'success') {
+      const alertBox = document.getElementById('account-alert');
+      if (!alertBox) return;
+      if (notificationTimer) clearTimeout(notificationTimer);
+      alertBox.innerHTML = msg;
+      alertBox.style.display = 'block';
+      if (type === 'error') {
+        alertBox.style.backgroundColor = '#fee2e2';
+        alertBox.style.color = '#991b1b';
+        alertBox.style.border = '1px solid #f87171';
+        notificationTimer = setTimeout(() => { alertBox.style.display = 'none'; }, 9000);
+      } else {
+        alertBox.style.backgroundColor = '#ecfdf5';
+        alertBox.style.color = '#065f46';
+        alertBox.style.border = '1px solid #6ee7b7';
+        notificationTimer = setTimeout(() => { alertBox.style.display = 'none'; }, 5000);
+      }
+    }
+
+    // Dashboard Internal Tab Switching
+    document.querySelectorAll('.dashboard-nav-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.dashboard-nav-btn').forEach(b => b.classList.remove('is-active'));
+        document.querySelectorAll('.dashboard-tab-panel').forEach(p => p.classList.remove('is-active'));
+
+        this.classList.add('is-active');
+        const targetPanelId = 'panel-' + this.getAttribute('data-dash-tab');
+        const panel = document.getElementById(targetPanelId);
+        if (panel) panel.classList.add('is-active');
+      });
+    });
+
+    // Render Orders in Customer Dashboard
+    async function renderCustomerOrders(uid) {
+      const container = document.getElementById('dash-orders-container');
+      const countSpan = document.getElementById('dash-order-count');
+      if (!container) return;
+
+      container.innerHTML = '<p style="color: var(--color-gray-dark); font-size: 13px;">Loading orders from Cloud Firestore...</p>';
+
+      const orders = await window.AltrixDatabase.getUserOrders(uid);
+      if (countSpan) countSpan.textContent = orders.length;
+
+      if (!orders || orders.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 36px 20px; border: 1px dashed var(--color-border); border-radius: var(--radius-sm);">
+            <h4 style="font-size: 16px; margin-bottom: 6px;">No Orders Yet</h4>
+            <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: 16px;">When you place orders through Shopify checkout, they will appear here with live USPS tracking.</p>
+            <a href="collection.html" class="btn btn-primary btn-sm">Explore Activewear Collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = orders.map(order => `
+        <div class="dash-order-card">
+          <div class="dash-order-header">
+            <div>
+              <span class="dash-order-id">${order.orderNumber}</span>
+              <span class="dash-order-date" style="margin-left: 10px;">&bull; Placed on ${order.date}</span>
+            </div>
+            <span class="dash-status-pill" style="background: ${order.status === 'In Transit' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(107, 114, 128, 0.15)'}; color: ${order.statusColor || '#111111'};">
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: ${order.statusColor || '#111111'};"></span>
+              ${order.status}
+            </span>
+          </div>
+
+          <div style="font-size: 13px; margin-bottom: 12px; color: var(--color-near-black);">
+            <strong>Carrier:</strong> ${order.carrier} &bull; <strong>Tracking #:</strong> <code style="background: var(--color-off-white); padding: 2px 6px; border-radius: 4px;">${order.trackingNumber}</code>
+            <div style="font-size: 12px; color: var(--color-gray-dark); margin-top: 4px;"><strong>Estimated Window:</strong> ${order.estDelivery}</div>
+          </div>
+
+          <div class="dash-order-items">
+            ${(order.items || []).map(item => `
+              <div class="dash-order-item-row">
+                <span>${item.qty}x ${item.title} (Size: ${item.size}, Color: ${item.color})</span>
+                <strong>${item.price}</strong>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="dash-order-footer">
+            <span style="color: var(--color-gray-dark);">Total Paid</span>
+            <strong style="font-size: 15px;">${order.total}</strong>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Populate Address Form in Customer Dashboard
+    async function loadCustomerAddress(uid) {
+      const addr = await window.AltrixDatabase.getAddress(uid);
+      if (addr) {
+        if (document.getElementById('addr-name')) document.getElementById('addr-name').value = addr.fullName || '';
+        if (document.getElementById('addr-street')) document.getElementById('addr-street').value = addr.street || '';
+        if (document.getElementById('addr-city')) document.getElementById('addr-city').value = addr.city || '';
+        if (document.getElementById('addr-state')) document.getElementById('addr-state').value = addr.state || '';
+        if (document.getElementById('addr-zip')) document.getElementById('addr-zip').value = addr.zip || '';
+        if (document.getElementById('addr-phone')) document.getElementById('addr-phone').value = addr.phone || '';
+      }
+    }
+
+    // Save Address Form Submission
+    const addressForm = document.getElementById('form-dash-address');
+    if (addressForm) {
+      addressForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const user = window.AltrixAuth.getCurrentUser();
+        if (!user) return;
+
+        const addressData = {
+          fullName: document.getElementById('addr-name').value.trim(),
+          street: document.getElementById('addr-street').value.trim(),
+          city: document.getElementById('addr-city').value.trim(),
+          state: document.getElementById('addr-state').value.trim(),
+          zip: document.getElementById('addr-zip').value.trim(),
+          phone: document.getElementById('addr-phone').value.trim()
+        };
+
+        const res = await window.AltrixDatabase.saveAddress(user.uid, addressData);
+        if (res.success) {
+          showNotification('Address successfully saved to Cloud Firestore Database!');
+        } else {
+          showNotification('Failed to save address: ' + res.error, 'error');
+        }
+      });
+    }
+
+    // Global Auth State Observer Handler
+    window.AltrixAuth.onAuthStateChanged(async function(user) {
+      const authContainer = document.getElementById('account-auth-container');
+      const dashboardContainer = document.getElementById('customer-dashboard');
+      const eyebrow = document.getElementById('account-portal-eyebrow');
+      const title = document.getElementById('account-portal-title');
+      const desc = document.getElementById('account-portal-desc');
+
+      if (user) {
+        // Logged In
+        if (authContainer) authContainer.style.display = 'none';
+        if (dashboardContainer) {
+          dashboardContainer.style.display = 'block';
+          dashboardContainer.classList.add('is-active');
+        }
+
+        if (eyebrow) eyebrow.textContent = 'Welcome Back';
+        if (title) title.textContent = 'MEMBER DASHBOARD';
+        if (desc) {
+          if (user.providerId === 'google.com' || (user.uid && user.uid.startsWith('google_'))) {
+            desc.textContent = 'Your connected Google profile, orders, and cloud delivery preferences.';
+          } else {
+            desc.textContent = 'Your customer account, orders, and cloud delivery preferences.';
+          }
+        }
+
+        // Populate Profile Card
+        const nameEl = document.getElementById('dash-user-name');
+        const emailEl = document.getElementById('dash-user-email');
+        const avatarEl = document.getElementById('dash-user-avatar');
+        const initialsEl = document.getElementById('dash-user-initials');
+        const googleBadge = document.getElementById('dash-google-badge');
+
+        if (nameEl) nameEl.textContent = user.displayName || 'Altrix Member';
+        if (emailEl) emailEl.textContent = user.email || '';
+
+        if (user.photoURL && avatarEl) {
+          avatarEl.src = user.photoURL;
+          avatarEl.style.display = 'block';
+          if (initialsEl) initialsEl.style.display = 'none';
+        } else if (initialsEl) {
+          initialsEl.textContent = (user.displayName || user.email || 'A')[0].toUpperCase();
+          initialsEl.style.display = 'flex';
+          if (avatarEl) avatarEl.style.display = 'none';
+        }
+
+        if (googleBadge) {
+          googleBadge.style.display = (user.providerId === 'google.com' || user.uid.startsWith('google_')) ? 'inline-flex' : 'none';
+        }
+
+        // Load dynamic data from Firestore
+        await renderCustomerOrders(user.uid);
+        await loadCustomerAddress(user.uid);
+      } else {
+        // Logged Out
+        if (authContainer) authContainer.style.display = 'block';
+        if (dashboardContainer) {
+          dashboardContainer.style.display = 'none';
+          dashboardContainer.classList.remove('is-active');
+        }
+
+        if (eyebrow) eyebrow.textContent = 'Customer Portal';
+        if (title) title.textContent = 'MY ACCOUNT';
+        if (desc) desc.textContent = 'Sign in with Google or your email to track orders, manage addresses, and access member perks.';
+      }
+    });
+
+    // Google Sign-In Event Handlers
+    const googleSignInBtn = document.getElementById('btn-google-signin');
+    const googleRegisterBtn = document.getElementById('btn-google-register');
+
+    async function handleGoogleLogin() {
+      showNotification('Connecting with Google Authentication...');
+      const res = await window.AltrixAuth.signInWithGoogle();
+      if (res.success) {
+        showNotification('Successfully authenticated with Google! Welcome back, ' + (res.user.displayName || 'Member') + '.');
+      } else {
+        if (res.code === 'auth/operation-not-allowed') {
+          showNotification('<strong>Google Sign-In is disabled</strong> in your Firebase Console.<br>Please open <strong>Firebase Console &gt; Authentication &gt; Sign-in method</strong>, click <strong>Google</strong> and turn on <strong>Enable</strong>.', 'error');
+        } else {
+          showNotification('Google Sign-In error: ' + res.error, 'error');
+        }
+      }
+    }
+
+    if (googleSignInBtn) googleSignInBtn.addEventListener('click', handleGoogleLogin);
+    if (googleRegisterBtn) googleRegisterBtn.addEventListener('click', handleGoogleLogin);
+
+    // Email Sign-In Form
+    const signinForm = document.getElementById('form-signin');
+    if (signinForm) {
+      signinForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('signin-email').value.trim();
+        const pwd = document.getElementById('signin-password').value;
+        const res = await window.AltrixAuth.signInWithEmail(email, pwd);
+        if (res.success) {
+          showNotification('Signed in successfully! Welcome, ' + res.user.displayName + '.');
+        } else {
+          showNotification('Sign in failed: ' + res.error, 'error');
+        }
+      });
+    }
+
+    // Email Register Form
+    const registerForm = document.getElementById('form-register');
+    if (registerForm) {
+      registerForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const first = document.getElementById('reg-first-name').value.trim();
+        const last = document.getElementById('reg-last-name').value.trim();
+        const email = document.getElementById('reg-email').value.trim();
+        const pwd = document.getElementById('reg-password').value;
+        const res = await window.AltrixAuth.registerWithEmail(first, last, email, pwd);
+        if (res.success) {
+          showNotification('Account created successfully! Welcome to AltrixWear, ' + res.user.displayName + '.');
+        } else {
+          showNotification('Registration failed: ' + res.error, 'error');
+        }
+      });
+    }
+
+    // Forgot Password Form
+    const forgotForm = document.getElementById('form-forgot');
+    if (forgotForm) {
+      forgotForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('recover-email').value.trim();
+        const res = await window.AltrixAuth.sendPasswordReset(email);
+        if (res.success) {
+          showNotification('Password reset link sent to ' + email + '. Please check your inbox.');
+          if (forgotPanel) forgotPanel.style.display = 'none';
+        } else {
+          showNotification('Error sending reset email: ' + res.error, 'error');
+        }
+      });
+    }
+
+    // Sign Out Button
+    const signoutBtn = document.getElementById('btn-dash-signout');
+    if (signoutBtn) {
+      signoutBtn.addEventListener('click', async function() {
+        await window.AltrixAuth.signOut();
+        showNotification('You have been signed out successfully.');
+      });
+    }
+
+    // Order Status Lookup Form
+    const orderLookupForm = document.getElementById('form-order-lookup');
+    const orderLookupResult = document.getElementById('order-lookup-result');
+    if (orderLookupForm) {
+      orderLookupForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const orderNum = document.getElementById('lookup-order').value.trim().toUpperCase();
+        const email = document.getElementById('lookup-email').value.trim();
+
+        if (orderLookupResult) {
+          orderLookupResult.style.display = 'block';
+          orderLookupResult.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <strong style="font-size: 15px;">Order ${orderNum.startsWith('#') ? orderNum : '#' + orderNum}</strong>
+              <span class="dash-status-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981;"></span>
+                In Transit
+              </span>
+            </div>
+            <p style="font-size: 13px; color: var(--color-gray-dark); margin-bottom: 6px;">Carrier: <strong>USPS Priority Mail</strong> &bull; Tracking #: <code>9400111899223198004521</code></p>
+            <p style="font-size: 13px; color: var(--color-near-black);">Estimated Delivery: <strong>8–12 Business Days</strong> to billing contact <strong>${email}</strong>.</p>
+          `;
+        }
+      });
     }
   </script>
 </body>

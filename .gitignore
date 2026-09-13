@@ -1,0 +1,38 @@
+# Vercel
+.vercel
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & Credentials (NEVER commit secrets)
+.env
+.env.*
+!.env.example
+*.env
+
+# Firebase & Service Account Private Keys & Certs
+*serviceAccount*.json
+*service-account*.json
+*firebase-adminsdk*.json
+*credentials*.json
+*.pem
+*.p8
+*.key
+*.pkcs12
+*.pfx
+
+# Scratch & Temporary Logs
+*.log
+scratch/
+.temp/
+.cache/
+

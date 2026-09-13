@@ -8,10 +8,24 @@
 
   // Ensure Shopify Storefront API client is loaded
   if (typeof window !== 'undefined' && !window.ShopifyStorefront) {
+    const isFile = window.location.protocol === 'file:';
     const isPreview = window.location.pathname.includes('/preview/');
     const sfScript = document.createElement('script');
-    sfScript.src = isPreview ? '../assets/shopify-storefront.js' : 'assets/shopify-storefront.js';
+    sfScript.src = isFile
+      ? (isPreview ? '../assets/shopify-storefront.js' : 'assets/shopify-storefront.js')
+      : '/assets/shopify-storefront.js';
     document.head.appendChild(sfScript);
+  }
+
+  // Ensure Firebase Auth & Database Client is loaded
+  if (typeof window !== 'undefined' && !window.AltrixAuth) {
+    const isFile = window.location.protocol === 'file:';
+    const isPreview = window.location.pathname.includes('/preview/');
+    const fbScript = document.createElement('script');
+    fbScript.src = isFile
+      ? (isPreview ? '../assets/firebase-app.js' : 'assets/firebase-app.js')
+      : '/assets/firebase-app.js';
+    document.head.appendChild(fbScript);
   }
 
   // --- Dynamic Cart & App State ---
@@ -924,6 +938,35 @@
         }
       });
     }
+
+    // Sync Header Pill Account Icon with Firebase Auth State
+    function updateHeaderAuthState(user) {
+      const accountLinks = document.querySelectorAll('.header-pill-actions a[href*="account"], .header-pill-actions a[href="/account"]');
+      accountLinks.forEach(link => {
+        if (user) {
+          link.setAttribute('title', `Signed in as ${user.displayName || user.email}`);
+          if (user.photoURL) {
+            link.innerHTML = `<img src="${user.photoURL}" alt="${user.displayName || 'User'}" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover; border: 1.5px solid #ffffff;">`;
+          } else {
+            const initial = (user.displayName || user.email || 'A')[0].toUpperCase();
+            link.innerHTML = `<span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#ffffff;color:#111111;font-weight:800;font-size:11px;">${initial}</span>`;
+          }
+        } else {
+          link.removeAttribute('title');
+          link.innerHTML = `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`;
+        }
+      });
+    }
+
+    window.addEventListener('altrix:auth-changed', function (e) {
+      updateHeaderAuthState(e.detail?.user);
+    });
+
+    setTimeout(() => {
+      if (window.AltrixAuth) {
+        updateHeaderAuthState(window.AltrixAuth.getCurrentUser());
+      }
+    }, 200);
   });
 
 })();

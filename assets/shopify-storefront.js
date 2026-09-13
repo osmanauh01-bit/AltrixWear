@@ -44,8 +44,11 @@
   async function loadVariantDatabase() {
     if (VARIANT_DATABASE) return VARIANT_DATABASE;
     try {
+      const isFile = window.location.protocol === 'file:';
       const isPreview = window.location.pathname.includes('/preview/');
-      const url = isPreview ? '../assets/shopify-variants.json' : 'assets/shopify-variants.json';
+      const url = isFile
+        ? (isPreview ? '../assets/shopify-variants.json' : 'assets/shopify-variants.json')
+        : '/assets/shopify-variants.json';
       const res = await fetch(url);
       if (res.ok) {
         VARIANT_DATABASE = await res.json();

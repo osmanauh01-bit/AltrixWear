@@ -1,0 +1,23 @@
+{
+  "name": "altrixwear-v2",
+  "version": "2.0.0",
+  "description": "ALTRIXWEAR Modern High-Performance Headless Shopify Storefront",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build step required for static storefront'"
+  },
+  "keywords": [
+    "shopify",
+    "storefront",
+    "ecommerce",
+    "activewear",
+    "altrixwear",
+    "vercel"
+  ],
+  "author": "ALTRIXWEAR",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "firebase-admin": "^12.1.0"
+  }
+}
